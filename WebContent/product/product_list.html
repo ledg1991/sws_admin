@@ -45,10 +45,20 @@
 	padding-top: 35px;
 	padding-left: 15px;
 }
+#add,#upd,#del{
+width:65px;
+height:30px;
+float:right;
+margin-right:10px;
+}
+
 #btn_wrap{
 	margin-top:10px;
 	margin-right:45px;
 }
+#list_page_wrap{
+	text-align: center;
+	}
 </style>
 </head>
 <body>
@@ -111,16 +121,13 @@
         </c:forEach>
     </table>
 			
-			<div id="btn_wrap">
+		<div id="list_page_wrap">
+					<a href="#">&lt;</a><strong><a href="#">1</a></strong> <a href="#">2</a> <a href="#">3</a> <a href="#">></a>
+					</div>
+					<div id="btn_wrap">
 					<input type="button" value="추가" name="add" id="add"/>
 					</div>
-			
-			</div>
-		</div>
-		
-		<div id="btn_wrap">
-					<input type="button" value="추가" name="add" id="add"/>
-					</div>
+					
 		<div id="footer">
 		&copy;2018 BILRIM Designed by GroupTwo
 		</div>
