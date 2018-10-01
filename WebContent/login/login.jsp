@@ -1,11 +1,12 @@
-
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+    pageEncoding="EUC-KR"%>
 <!DOCTYPE html>
-
 <html>
 <head>
-<meta charset="EUC-KR">
+<meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
 <title>Insert title here</title>
-<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<!--CDN-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 <script type="text/javascript">
 $(document).ready(function(){
     $("#btnLogin").click(function(){
@@ -37,12 +38,9 @@ $(document).ready(function(){
 	font-size: 50px;
 	color: #2f2f2f;
 }
-
-
 </style>
 </head>
-<body >
-	
+<body>
 
 	<div style="text-align:center; margin-top:10%;" >
 	
@@ -60,12 +58,6 @@ $(document).ready(function(){
 
 <hr>
 
-	
-	
-	
 
 </body>
 </html>
-
-
-
