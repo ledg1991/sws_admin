@@ -439,10 +439,6 @@ html, body {
 							<td class="Question">배송은 언제 될까요?</td>
 							<td class="QuestionDate">2018-08-27</td>
 						</tr>
-						
-
-
-
 					</table>
 
 				</div>
