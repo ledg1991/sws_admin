@@ -47,10 +47,10 @@ $(document).ready(function(){
 	
 	<h1 class=logo>BILRIM:ºô¸²</h1>
 	ID
-	<input name="userId" id="userId"></td>
+	<input type="text" name="userId" id="userId" style="ime-mode:disabled;"></td>
 	<p/>
 	PW
-	<input type="password" value="" title="pass"/>
+	<input type="password" name="userPw" id="userPw"/>
 	<p/>
 	<input type="button"  onclick="location.href='main.html'" value="·Î±×ÀÎ" />
 	
