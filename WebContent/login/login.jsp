@@ -1,10 +1,12 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
+
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
-<title>Insert title here</title>
+<title>로그인</title>
 <!--CDN-->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 <script type="text/javascript">
@@ -52,7 +54,13 @@ $(document).ready(function(){
 	PW
 	<input type="password" name="userPw" id="userPw"/>
 	<p/>
-	<input type="button"  onclick="location.href='main.html'" value="로그인" />
+	<input type="button"  value="로그인" id="btnLogin"/>
+	
+	  <c:if test="${msg == 'failure'}">
+                    <div style="color: red">
+                        아이디 또는 비밀번호가 일치하지 않습니다.
+                    </div>
+                </c:if>
 	
 	</div>
 
