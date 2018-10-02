@@ -48,6 +48,7 @@ $(document).ready(function(){
 	
 	
 	<h1 class=logo>BILRIM:빌림</h1>
+	<form id="form1" name="form1" action="#" method="get" >
 	ID
 	<input type="text" name="userId" id="userId" style="ime-mode:disabled;"></td>
 	<p/>
@@ -55,13 +56,13 @@ $(document).ready(function(){
 	<input type="password" name="userPw" id="userPw"/>
 	<p/>
 	<input type="button"  value="로그인" id="btnLogin"/>
+	</form>
 	
 	  <c:if test="${msg == 'failure'}">
                     <div style="color: red">
                         아이디 또는 비밀번호가 일치하지 않습니다.
                     </div>
-                </c:if>
-	
+       </c:if>
 	</div>
 
 <hr>
