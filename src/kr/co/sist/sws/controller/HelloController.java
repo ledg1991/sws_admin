@@ -2,16 +2,28 @@ package kr.co.sist.sws.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.servlet.ModelAndView;
+
+import kr.co.sist.sws.service.loginservice;
+import kr.co.sist.sws.vo.Manager;
+
 import static org.springframework.web.bind.annotation.RequestMethod.GET; 
 import static org.springframework.web.bind.annotation.RequestMethod.POST;
 
 import java.io.IOException;
 
+import javax.inject.Inject;
 import javax.servlet.ServletException;
-import javax.servlet.http.HttpServletRequest;; 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;; 
+
+
+
 
 @Controller
 public class HelloController {
+	@Inject
+	loginservice login;
 	
 	@RequestMapping(value="index.do", method=GET)
 	public String hello() {
@@ -19,28 +31,34 @@ public class HelloController {
 	}//hello
 
 	@RequestMapping(value="admin/loginCheck.do", method={GET,POST})
-	public String get(HttpServletRequest request) throws ServletException, IOException  {
-		
-		return "get";
-	}//get
+	 public ModelAndView loginCheck(HttpSession session, Manager mv, ModelAndView mav){
+        String name = login.
+        // 로그인 성공
+        if(name != null) {
+            session.setAttribute("adminId", mv.getID());
+            session.setAttribute("adminPw", mv.getPW());
+            session.setAttribute("adminName", name);
+            session.setAttribute("userName", name);
+            mav.setViewName("admin/adminHome"); // 관리자 페이지 이동
+            mav.addObject("msg", "success");
+        // 로그인 실패
+        } else { 
+            mav.setViewName("admin/adminLogin"); // 로그인 페이지 이동
+            mav.addObject("msg", "failure");
+        }
+        return mav;
+    }
+
+    // 3. 관리자 로그아웃
+    @RequestMapping("logout.do")
+    public ModelAndView logout(HttpSession session){
+        session.invalidate();
+        ModelAndView mav = new ModelAndView();
+        mav.setViewName("admin/adminLogin");
+        mav.addObject("msg", "logout");
+        return mav;
+    }
 	
-	@RequestMapping(value="post.do", method=POST)
-	public String post() {
-		return "day0917/post";
-	}//post
-	
-	//여러개의 요청방식을 한 번에 처리하려면 {}로 넣는다.
-	@RequestMapping(value="get_post.do", method={GET, POST})
-	public String getPost() {
-		return "day0917/get_post";
-	}//getPost
-	
-	//하위 경로에대한 요청 : Controller가 어디에 있든 상관 없고, value에서만
-	//변경해주면 된다.
-	@RequestMapping(value="day0917/sub_dir.do", method=GET)
-	public String subDir() {
-		return "sub_dir";
-	}//getPost
 	
 	
 	
