@@ -1,10 +1,15 @@
 package kr.co.sist.sws.controller;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
-import kr.co.sist.sws.service.loginservice;
+import com.sun.tracing.dtrace.ModuleAttributes;
+
+import kr.co.sist.sws.service.Loginservice;
 import kr.co.sist.sws.vo.Manager;
 
 import static org.springframework.web.bind.annotation.RequestMethod.GET; 
@@ -21,29 +26,31 @@ import javax.servlet.http.HttpSession;;
 
 
 @Controller
-public class HelloController {
+public class Logincontroller {
+	
+	private static final Logger logger = LoggerFactory.getLogger(Logincontroller.class);
 	@Inject
-	loginservice login;
+	Loginservice loginservice;
 	
 	@RequestMapping(value="index.do", method=GET)
-	public String hello() {
+	public String Login() { 
 		return "login/login";
 	}//hello
 
-	@RequestMapping(value="admin/loginCheck.do", method={GET,POST})
-	 public ModelAndView loginCheck(HttpSession session, Manager mv, ModelAndView mav){
-        String name = login.
+	@RequestMapping(value="login/loginCheck.do", method={GET,POST})
+	 public ModelAndView loginCheck( @ModelAttribute Manager mv, HttpSession session){
+		boolean result = loginservice.loginCheck(mv,session);
+		ModelAndView mav = new ModelAndView();
+		
         // 로그인 성공
-        if(name != null) {
-            session.setAttribute("adminId", mv.getID());
-            session.setAttribute("adminPw", mv.getPW());
-            session.setAttribute("adminName", name);
-            session.setAttribute("userName", name);
-            mav.setViewName("admin/adminHome"); // 관리자 페이지 이동
+        if(result == true) {
+        	//main.jsp 이동
+            
+            mav.setViewName("main/main");// 관리자 페이지 이동
             mav.addObject("msg", "success");
         // 로그인 실패
         } else { 
-            mav.setViewName("admin/adminLogin"); // 로그인 페이지 이동
+            mav.setViewName("login/login"); // 로그인 페이지 이동
             mav.addObject("msg", "failure");
         }
         return mav;
@@ -52,9 +59,9 @@ public class HelloController {
     // 3. 관리자 로그아웃
     @RequestMapping("logout.do")
     public ModelAndView logout(HttpSession session){
-        session.invalidate();
+        loginservice.logout(session);
         ModelAndView mav = new ModelAndView();
-        mav.setViewName("admin/adminLogin");
+        mav.setViewName("login/login");
         mav.addObject("msg", "logout");
         return mav;
     }

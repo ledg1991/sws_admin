@@ -8,7 +8,7 @@ import kr.co.sist.sws.dao.ManagerDAO;
 import kr.co.sist.sws.vo.Manager;
 
 @Service
-public class loginserviceImpl {
+public class LoginserviceImpl {
 
 	@Inject
     ManagerDAO mDao;
