@@ -4,7 +4,7 @@ import javax.servlet.http.HttpSession;
 
 import kr.co.sist.sws.vo.Manager;
 
-public class ManagerDAO {
+public interface ManagerDAO {
 	
 	public boolean loginCheck(Manager mv);
     // 01_02. 회원 로그인 정보

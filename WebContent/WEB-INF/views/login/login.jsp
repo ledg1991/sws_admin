@@ -22,12 +22,12 @@ $(document).ready(function(){
             return; // 함수 종료
         }
         if(userPw == ""){
-            alert("아이디를 입력하세요.");
+            alert("비밀번호를 입력하세요.");
             $("#userPw").focus();
             return;
         }
         // 폼 내부의 데이터를 전송할 주소
-        document.form1.action="${path}/member/loginCheck.do"
+        document.form1.action="${path}/login/loginCheck.do"
         // 제출
         document.form1.submit();
     });
@@ -48,7 +48,7 @@ $(document).ready(function(){
 	
 	
 	<h1 class=logo>BILRIM:빌림</h1>
-	<form id="form1" name="form1" action="#" method="get" >
+	<form id="form1" name="form1" action="#" method="post" >
 	ID
 	<input type="text" name="userId" id="userId" style="ime-mode:disabled;"></td>
 	<p/>
@@ -56,14 +56,23 @@ $(document).ready(function(){
 	<input type="password" name="userPw" id="userPw"/>
 	<p/>
 	<input type="button"  value="로그인" id="btnLogin"/>
-	</form>
+	
+	
 	
 	  <c:if test="${msg == 'failure'}">
                     <div style="color: red">
                         아이디 또는 비밀번호가 일치하지 않습니다.
                     </div>
        </c:if>
+       
+       <c:if test="${msg == 'logout'}">
+                    <div style="color: red">
+                        로그아웃되었습니다.
+                    </div>
+                </c:if>
+                </form>
 	</div>
+	
 
 <hr>
 

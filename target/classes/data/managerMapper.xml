@@ -7,11 +7,11 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 <mapper namespace="manager">
     
     <select id="loginCheck" resultType="String">
-        SELECT user_name AS userName FROM tbl_member
-        WHERE user_id = #{userId} AND user_pw = #{userPw}
+        SELECT MANAGERNAME AS userName FROM MANAGER
+        WHERE ID = #{userId} AND PW = #{userPw}
     </select>
     
-    <select id="viewMember" resultType="com.example.spring02.model.member.dto.MemberVO">
+    <select id="viewMember" resultType="">
         SELECT 
             user_name AS userName,
             user_id AS userId,

@@ -2,6 +2,7 @@ package kr.co.sist.sws.controller;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -10,6 +11,7 @@ import org.springframework.web.servlet.ModelAndView;
 import com.sun.tracing.dtrace.ModuleAttributes;
 
 import kr.co.sist.sws.service.Loginservice;
+import kr.co.sist.sws.service.LoginserviceImpl;
 import kr.co.sist.sws.vo.Manager;
 
 import static org.springframework.web.bind.annotation.RequestMethod.GET; 
@@ -29,15 +31,15 @@ import javax.servlet.http.HttpSession;;
 public class Logincontroller {
 	
 	private static final Logger logger = LoggerFactory.getLogger(Logincontroller.class);
-	@Inject
-	Loginservice loginservice;
+	@Autowired(required=false)
+	LoginserviceImpl loginservice;
 	
 	@RequestMapping(value="index.do", method=GET)
 	public String Login() { 
 		return "login/login";
 	}//hello
 
-	@RequestMapping(value="login/loginCheck.do", method={GET,POST})
+	@RequestMapping("loginCheck.do")
 	 public ModelAndView loginCheck( @ModelAttribute Manager mv, HttpSession session){
 		boolean result = loginservice.loginCheck(mv,session);
 		ModelAndView mav = new ModelAndView();

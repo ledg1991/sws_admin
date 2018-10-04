@@ -4,7 +4,7 @@ import javax.servlet.http.HttpSession;
 
 import kr.co.sist.sws.vo.Manager;
 
-
+   
 
 	public interface Loginservice {
 	    // 01_01. 회원 로그인 체크
