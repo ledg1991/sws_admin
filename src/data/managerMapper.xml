@@ -7,18 +7,17 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 <mapper namespace="manager">
     
     <select id="loginCheck" resultType="String">
-        SELECT MANAGERNAME AS userName FROM MANAGER
+        SELECT MANAGERNAME  FROM MANAGER
         WHERE ID = #{userId} AND PW = #{userPw}
     </select>
     
-    <select id="viewMember" resultType="">
+    <select id="viewManager" resultType="kr.co.sist.sws.vo.Manager">
         SELECT 
-            user_name AS userName,
-            user_id AS userId,
-            user_email AS userEmail,
-            user_regdate AS userRegdate
-        FROM tbl_member
-        WHERE user_id = #{userId} AND user_pw = #{userPw}
+            MANAGERNAME,
+            ID 
+            
+        FROM MANAGER
+        WHERE ID = #{userId} AND PW = #{userPw}
     </select>
  
 </mapper>

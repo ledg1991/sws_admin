@@ -20,18 +20,18 @@ public class LoginserviceImpl implements Loginservice {
 	public boolean loginCheck(Manager mv, HttpSession session) {
 		 boolean result = mDao.loginCheck(mv);
 		 if (result) { // true일 경우 세션에 등록
-	            Manager mv2 = viewMember(mv);
+	            Manager mv2 = viewManager(mv);
 	            // 세션 변수 등록
-	            session.setAttribute("userId", mv.getID());
-	            session.setAttribute("userName", mv.getMANAGERNAME());
+	            session.setAttribute("userId", mv.getId());
+	            session.setAttribute("userName", mv.getManagername());
 	        } 
 	        return result;
 	   }
 
 	@Override
-	public Manager viewMember(Manager mv) {
+	public Manager viewManager(Manager mv) {
 		// TODO Auto-generated method stub
-		return mDao.viewMember(mv);
+		return mDao.viewManager(mv);
 	}
 
 	@Override

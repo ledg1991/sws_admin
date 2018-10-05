@@ -10,7 +10,7 @@ import kr.co.sist.sws.vo.Manager;
 	    // 01_01. 회원 로그인 체크
 	    public boolean loginCheck(Manager mv, HttpSession session);
 	    // 01_02. 회원 로그인 정보
-	    public Manager viewMember(Manager mv);
+	    public Manager viewManager(Manager mv);
 	    // 02. 회원 로그아웃
 	    public void logout(HttpSession session);
 	}

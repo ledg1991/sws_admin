@@ -5,7 +5,7 @@
 <configuration>
 <properties resource="properties/database.properties"/>
 <typeAliases>
-	<typeAlias type="kr.co.sist.user.vo.userVO" alias="userVO"/>
+	<typeAlias type="kr.co.sist.sws.vo.Manager" alias="Manager"/>
 </typeAliases>
   <environments default="development">
     <environment id="development">

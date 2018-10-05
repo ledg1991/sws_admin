@@ -24,13 +24,16 @@ public class ManagerDAOImpl implements ManagerDAO {
     }
     // 01_02. 회원 로그인 정보
     @Override
-    public Manager viewMember(Manager mv) {
-        return sqlSession.selectOne("manager.viewMember", mv);
-    }
+	public Manager viewManager(Manager mv) {
+		// TODO Auto-generated method stub
+		return sqlSession.selectOne("manager.viewManager", mv);
+	}
     // 02. 회원 로그아웃
     @Override
-    public void logout(HttpSession sessin) {
+    public void logout(HttpSession session) {
+    	session.invalidate();
     }
+	
 }
  
 

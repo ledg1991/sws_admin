@@ -5,6 +5,6 @@ import lombok.Data;
 @Data
 public class Manager {
 
-	public String MANAGER_NUMBER, ID, PW, MANAGERNAME, HIREDATE, AUTHORITY;
-	
+	public String manager_number, id, pw, managername, hiredate, authority;
+
 }
