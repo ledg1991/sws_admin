@@ -381,26 +381,34 @@ html, body {
 			<div id="slide_menu" style="background-color: #E1E1E1">
 				<section class="regular slider">
 					<div>
-						<a href="http://localhost:8080/group2_sws_prj/member/member_list.html"><img src="http://localhost:8080/group2_sws_prj/common/img/m_manage.jpg" width="350px" height="300px"></a>
+						<a href="http://localhost:8080/group2_sws_prj/member/member_list.html">
+						<img src="http://localhost:8080/group2_sws_prj/common/img/m_manage.jpg" width="350px" height="300px"></a>
 					</div>
 					<div>
-						<img src="http://placehold.it/350x300?text=2">
+						<a href="http://localhost:8080/group2_sws_prj/question/question_list.html">
+						<img src="http://localhost:8080/group2_sws_prj/common/img/q_manage.jpg" width="350px" height="300px"></a>
 					</div>
 					<div>
-						<img src="http://placehold.it/350x300?text=3">
+						<a href="http://localhost:8080/group2_sws_prj/member/product_list.html">
+						<img src="http://localhost:8080/group2_sws_prj/common/img/p_manage.jpg" width="350px" height="300px"></a>
 					</div>
 					<div>
-						<img src="http://placehold.it/350x300?text=4">
+						<a href="http://localhost:8080/group2_sws_prj/member/rental_list.html">
+						<img src="http://localhost:8080/group2_sws_prj/common/img/r_manage.jpg" width="350px" height="300px"></a>
 					</div>
 					<div>
-						<img src="http://placehold.it/350x300?text=5">
+						<a href="http://localhost:8080/group2_sws_prj/member/ticket_list.html">
+						<img src="http://localhost:8080/group2_sws_prj/common/img/t_manage.jpg" width="350px" height="300px"></a>
 					</div>
 					<div>
-						<img src="http://placehold.it/350x300?text=6">
+						<a href="http://localhost:8080/group2_sws_prj/member/admin_list.html">
+						<img src="http://localhost:8080/group2_sws_prj/common/img/a_manage.jpg" width="350px" height="300px"></a>
 					</div>
 					<div>
-						<img src="http://placehold.it/350x300?text=7">
+						<a href="http://localhost:8080/group2_sws_prj/member/notice_list.html">
+						<img src="http://localhost:8080/group2_sws_prj/common/img/n_manage.jpg" width="350px" height="300px"></a>
 					</div>
+					
 				</section>
 			</div>
 

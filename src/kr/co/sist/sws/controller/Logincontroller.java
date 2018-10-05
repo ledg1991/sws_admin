@@ -4,12 +4,14 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 
 import kr.co.sist.sws.service.LoginserviceImpl;
+import kr.co.sist.sws.vo.Login;
 import kr.co.sist.sws.vo.Manager;
 
 import static org.springframework.web.bind.annotation.RequestMethod.GET; 
@@ -30,27 +32,26 @@ public class Logincontroller {
 	LoginserviceImpl loginservice;
 	
 	@RequestMapping("login.do")
-	public String Login() { 
+	public String login() { 
 		return "login/login";
 	}//hello
 
 	@RequestMapping("loginCheck.do")
-	 public ModelAndView loginCheck( @ModelAttribute Manager mv, HttpSession session){
-		boolean result = loginservice.loginCheck(mv,session);
-		ModelAndView mav = new ModelAndView();
-		
+	 public String loginCheck( Login lo,Model m, HttpSession session){
+		boolean result = loginservice.loginCheck(lo);
+		String url="login/login";
         // 로그인 성공
-        if(result == true) {
+        if(result) {
         	//main.jsp 이동
             
-            mav.setViewName("main/main");// 관리자 페이지 이동
-            mav.addObject("msg", "success");
+        	url="main/main";// 관리자 페이지 이동
         // 로그인 실패
-        } else { 
-            mav.setViewName("login/login"); // 로그인 페이지 이동
-            mav.addObject("msg", "fail");
+        } else {
+        	
+        	String msg="fail";
+        	m.addAttribute("msg",msg);
         }
-        return mav;
+        return url;
     }
 
     // 3. 관리자 로그아웃

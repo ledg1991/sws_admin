@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Repository;
 
+import kr.co.sist.sws.vo.Login;
 import kr.co.sist.sws.vo.Manager;
 
 @Component// 현재 클래스를 스프링에서 관리하는 dao bean으로 등록
@@ -18,8 +19,8 @@ public class ManagerDAOImpl implements ManagerDAO {
     SqlSession sqlSession; // mybatis 실행 객체
     // 01_01. 회원 로그인체크
     @Override
-    public boolean loginCheck(Manager mv) {
-        String name = sqlSession.selectOne("manager.loginCheck", mv);
+    public boolean loginCheck(Login lo) {
+        String name = sqlSession.selectOne("manager.loginCheck", lo);
         return (name == null) ? false : true;
     }
     // 01_02. 회원 로그인 정보
