@@ -24,10 +24,10 @@ import javax.servlet.http.HttpSession;;
 
 
 @Controller
-public class Logincontroller {
+public class Linkcontroller {
 	
 	@SuppressWarnings("unused")
-	private static final Logger logger = LoggerFactory.getLogger(Logincontroller.class);
+	private static final Logger logger = LoggerFactory.getLogger(Linkcontroller.class);
 	@Autowired(required=false)
 	LoginserviceImpl loginservice;
 	
