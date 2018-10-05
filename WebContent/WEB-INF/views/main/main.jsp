@@ -242,7 +242,7 @@ html, body {
 						<img src="http://localhost:8080/group2_sws_prj/common/img/t_manage.jpg" width="350px" height="300px"></a>
 					</div>
 					<div>
-						<a href="http://localhost:8080/group2_sws_prj/member/admin_list.html">
+						<a href="${path}/group2_sws_prj/admin.do">
 						<img src="http://localhost:8080/group2_sws_prj/common/img/a_manage.jpg" width="350px" height="300px"></a>
 					</div>
 					<div>

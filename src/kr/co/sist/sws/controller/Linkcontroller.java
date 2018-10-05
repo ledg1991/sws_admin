@@ -31,11 +31,15 @@ public class Linkcontroller {
 	@Autowired(required=false)
 	
 	
-	@RequestMapping("m.do")
-	public String login() { 
-		return "";
+	@RequestMapping("admin.do")
+	public String adminLink() { 
+		return "admin/admin_list";
 	}//hello
 
+	@RequestMapping("admin_insert.do")
+	public String admin_insertLink() { 
+		return "admin/admin_insert";
+	}//hello
 
 	
 	
