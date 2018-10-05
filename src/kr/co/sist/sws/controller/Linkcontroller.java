@@ -29,40 +29,14 @@ public class Linkcontroller {
 	@SuppressWarnings("unused")
 	private static final Logger logger = LoggerFactory.getLogger(Linkcontroller.class);
 	@Autowired(required=false)
-	LoginserviceImpl loginservice;
 	
-	@RequestMapping("login.do")
+	
+	@RequestMapping("m.do")
 	public String login() { 
-		return "login/login";
+		return "";
 	}//hello
 
-	@RequestMapping("loginCheck.do")
-	 public String loginCheck( Login lo,Model m, HttpSession session){
-		boolean result = loginservice.loginCheck(lo);
-		String url="login/login";
-        // 로그인 성공
-        if(result) {
-        	//main.jsp 이동
-            
-        	url="main/main";// 관리자 페이지 이동
-        // 로그인 실패
-        } else {
-        	
-        	String msg="fail";
-        	m.addAttribute("msg",msg);
-        }
-        return url;
-    }
 
-    // 3. 관리자 로그아웃
-    @RequestMapping("logout.do")
-    public String logout(HttpSession session,Model m){
-    	String url="login/login";
-    	String msg="logout";
-    	m.addAttribute("msg",msg);
-    	
-        return url;
-    }
 	
 	
 	
