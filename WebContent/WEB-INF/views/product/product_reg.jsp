@@ -75,22 +75,14 @@ height:400px;
 
 		
 		<div id="contents">
-			<div id="nav">
-				<ul>
-					<li><a href="${path}/group2_sws_prj/member.do">회원 관리</a></li>
-					<li><a href="${path}/group2_sws_prj/question.do">문의 관리</a></li>
-					<li><a href="${path}/group2_sws_prj/product.do">상품 관리</a></li>
-					<li><a href="${path}/group2_sws_prj/rental.do">대여 관리</a></li>
-					<li><a href="${path}/group2_sws_prj/ticket.do">이용권 관리</a></li>
-					<li><a href="${path}/group2_sws_prj/admin.do">관리자 관리</a></li>
-					<li><a href="${path}/group2_sws_prj/notice.do">공지 사항</a></li>
-					</ul>
-			</div>
+			
+				<%@ include file="../main/nav.jsp" %>
+			
 
 
 
 			<div id="content">
-			<h2>상품 정보/삭제</h2>
+			<div id="content_title"><strong>상품 입력</strong></div>
 <form id="form1" name="form1" enctype="multipart/form-data" method="post">
     <table border="">
         <tr>

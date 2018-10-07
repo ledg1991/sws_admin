@@ -76,24 +76,13 @@ margin-right:10px;
 
 		
 		<div id="contents">
-			<div id="nav">
-				<ul>
-					<li><a href="${path}/group2_sws_prj/member.do">회원 관리</a></li>
-					<li><a href="${path}/group2_sws_prj/question.do">문의 관리</a></li>
-					<li><a href="${path}/group2_sws_prj/product.do">상품 관리</a></li>
-					<li><a href="${path}/group2_sws_prj/rental.do">대여 관리</a></li>
-					<li><a href="${path}/group2_sws_prj/ticket.do">이용권 관리</a></li>
-					<li><a href="${path}/group2_sws_prj/admin.do">관리자 관리</a></li>
-					<li><a href="${path}/group2_sws_prj/notice.do">공지 사항</a></li>
-					</ul>
-				</div> <!-- nav 종료 -->
-
+			
+	<%@ include file="../main/nav.jsp" %> // 목차
 
 
 			<div id="content">
 			<div id="content_title"><strong>상품 목록</strong></div>
-				<h2>상품 목록</h2>
-    <table border="1">
+    <table >
         <tr>
             <th>상품ID번호</th>
             <th>상품이미지</th>
@@ -127,9 +116,7 @@ margin-right:10px;
 					<input type="button" value="추가" name="add" id="add"/>
 					</div>
 					
-		<div id="footer">
-		&copy;2018 BILRIM Designed by GroupTwo
-		</div>
+		
 	</div>
 	</div>
 	</div>

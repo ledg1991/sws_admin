@@ -115,13 +115,7 @@
 
 
 
-#footer {
-	border-top: 1px solid #e0e0e0;
-	height: 100px;
-	text-align: center;
-	padding-top: 35px;
-	
-}
+
 
 html, body {
 	margin: 0;
