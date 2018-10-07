@@ -1,10 +1,12 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
-<title>관리자 관리 </title>
+<title>회원 관리 </title>
 <%@ include file="../main/header.jsp" %>
 
 <!--  CDN -->
@@ -26,43 +28,11 @@ border-top:1px solid #333;
 margin:35px auto;
 border-bottom:1px solid #333;
 }
-tr{
-	height:38px;
+tr{ 	height:38px;
 }
 th{border-bottom: 1px solid #333;}
-td{
-text-align:center;
-}
-.title{
-text-align:center;
-}
-#num{
-width:50px;
-}
-#emp_num{
-width:150px;
-}
-#name{
-width:250px;
-}
-#position{
-width:200px;
-}
-#input_date{
-width:130px;
-}
+td{ text-align:center; }
 
-#add,#upd,#del{
-width:65px;
-height:30px;
-float:right;
-margin-right:10px;
-}
-
-#btn_wrap{
-	margin-top:10px;
-	margin-right:45px;
-}
 #list_page_wrap{
 	text-align: center;
 	}
@@ -103,7 +73,7 @@ margin-right:10px;
 							<td>1</td>
 							<td>kyong</td>
 							<td>이동근</td>
-							<td ><a href="#">[FAQ]제품을 분실하면 어떻게 해야하나요</a></td>
+							<td ><a href="#">lkl@naver.com</a></td>
 							<td>2018-09-18</td>
 							<td>답변</td>
 						</tr>
@@ -111,7 +81,7 @@ margin-right:10px;
 							<td>1</td>
 							<td>대여</td>
 							<td>kyong</td>
-							<td ><a href="#">[FAQ]제품을 분실하면 어떻게 해야하나요</a></td>
+							<td ><a href="#">lkl@naver.com</a></td>
 							<td>2018-09-18</td>
 							<td>답변</td>
 						</tr>
@@ -119,7 +89,7 @@ margin-right:10px;
 							<td>1</td>
 							<td>대여</td>
 							<td>kyong</td>
-							<td ><a href="#">[FAQ]제품을 분실하면 어떻게 해야하나요</a></td>
+							<td ><a href="#">lkl@naver.com</a></td>
 							<td>2018-09-18</td>
 							<td>답변</td>
 						</tr>
@@ -137,8 +107,8 @@ margin-right:10px;
 			</form>
 		</div>
 					
-					</div>
-					</div>
+	</div>
+	</div>
 	</div>
 	</div>
 	<div id="footer">
