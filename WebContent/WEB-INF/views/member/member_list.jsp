@@ -75,13 +75,13 @@ margin-right:10px;
 		<div id="contents">
 			<div id="nav">
 				<ul>
-					<li><a href="http://localhost:8080/group2_sws_prj/member/member_list.html">회원 관리</a></li>
-					<li><a href="http://localhost:8080/group2_sws_prj/question/question_list.html">문의 관리</a></li>
-					<li><a href="http://localhost:8080/group2_sws_prj/product/product_list.html">상품 관리</a></li>
-					<li><a href="http://localhost:8080/group2_sws_prj/rental/rental_list.html">대여 관리</a></li>
-					<li><a href="http://localhost:8080/group2_sws_prj/ticket/ticket_list.html">이용권 관리</a></li>
-					<li><a href="http://localhost:8080/group2_sws_prj/admin/admin_list.html">관리자 관리</a></li>
-					<li><a href="http://localhost:8080/group2_sws_prj/notice/notice_list.html">공지 사항</a></li>
+					<li><a href="${path}/group2_sws_prj/member.do">회원 관리</a></li>
+					<li><a href="${path}/group2_sws_prj/question.do">문의 관리</a></li>
+					<li><a href="${path}/group2_sws_prj/product.do">상품 관리</a></li>
+					<li><a href="${path}/group2_sws_prj/rental.do">대여 관리</a></li>
+					<li><a href="${path}/group2_sws_prj/ticket.do">이용권 관리</a></li>
+					<li><a href="${path}/group2_sws_prj/admin.do">관리자 관리</a></li>
+					<li><a href="${path}/group2_sws_prj/notice.do">공지 사항</a></li>
 				</ul>
 				</div> <!-- nav 종료 -->
 
