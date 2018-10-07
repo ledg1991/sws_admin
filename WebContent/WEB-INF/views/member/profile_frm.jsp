@@ -1,143 +1,99 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+    <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="EUC-KR">
-<title>È¸¿ø »ó¼¼Á¤º¸</title>
+<meta charset="UTF-8">
+<title>ê´€ë¦¬ì ë“±ë¡ </title>
+<%@ include file="../main/header.jsp" %>
+
 <!--  CDN -->
 <script type="text/javascript"
 	src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 
 
+
 <script type="text/javascript">
 
 </script>
+
+<!-- nav css -->
 <link href="http://localhost:8080/group2_sws_prj/common/css/nav_frm.css" rel="stylesheet" type="text/css" />
 
 <style type="text/css">
 
-
-#hello {
-	width: 100%;
-	height: 90px;
-}
-
-#hr {
-	wdith: 100%;
-}
-
-#title {
-	float: right;
-	wdith: 200px;
-}
-
-#current {
-	color: #000000;
-}
-
-#current:hover {
-	color: #ffffff;
-}
-
-#contents {
-	min-height: 1000px;
-}
-
-#content {
-	width:964px;
-	padding-top: 50px;
-	padding-left:35px;
-	float:right;
-}
-
-#profilebox {
-	background-color: #E0E0E0;
-	height: 250px;
-	margin-top: 20px;
-	margin-bottom: 50px;
-	padding-top: 50px;
-}
-#managebutton {
-	margin-top: 90px;
-	float: right;
-}
-
-#box {
-	margin-top: 20px; margin-left : 40px; margin-right : 40px; margin-bottom
-	: 30px;
-	padding: 0;
-	margin-left: 40px;
-	margin-right: 40px;
-	margin-bottom: 30px;
-}
+table{
+margin:35px auto;
 
 }
-.NoticeDate {
-	text-align: right;
+tr{
+	height:38px;
+}
+th{
+text-align:left;
+width:125px;
+}
+td{
+padding-left:15px;
+}
+#e_name{
+	width:170px;
+}
+#e_num1{
+	width:50px;
+}
+#e_num2{
+	width:110px;
+}
+#e_authority{
+	height: 26px;
+}
+.inputBox{
+	height: 18px;
+}
+.btn{
+width:65px;
+height:25px;
+margin-right:10px;
 }
 
-.Notice {
-	width: 300px;
+#email_content{
+margin:3px;
+width:800px;
+height:400px;
 }
-
-#footer {
-	border-top: 1px solid #e0e0e0;
-	height: 150px;
-	text-align: center;
-	padding-top: 35px;
-	padding-left: 15px;
-}
-
-.white {
-	width: 40px;
-}
-#photo{
-	width:150px;
-	height:150px;
-	border: 1px solid black;
-
+#btn_wrap{
+	text-align:center;
+	margin-top:50px;
+	margin-right:45px;
 }
 </style>
 </head>
 <body>
 	<div id="wrap">
 
-		<div id="header">
-
-			<div class="menubar">
-
-				<ul>
-					<a href="http://localhost:8080/group2_sws_prj/main/main.html"><li id="logo"><span class=logo>BILRIM:ºô¸²</span></li></a>
-					<li style="float: right"><a href="#" id="current"
-						onmouseover="this.style.color='#ffffff'"
-						onmouseout="this.style.color='#000000'">¼ÛÀç¿ø ´ëÇ¥´Ô ¡å</a>
-						<ul>
-							<li id="log_out"><a href="#"
-								onmouseover="document.getElementById('current').style.color='#ffffff'"
-								onmouseout="document.getElementById('current').style.color='#000000'">·Î±×¾Æ¿ô</a></li>
-						</ul></li>
-				</ul>
-			</div>
-		</div>
+		
 		<div id="contents">
 			<div id="nav">
 				<ul>
-					<li><a href="http://localhost:8080/group2_sws_prj/member/member_list.html">È¸¿ø °ü¸®</a></li>
-					<li><a href="http://localhost:8080/group2_sws_prj/question/question_list.html">¹®ÀÇ °ü¸®</a></li>
-					<li><a href="http://localhost:8080/group2_sws_prj/product/product_list.html">»óÇ° °ü¸®</a></li>
-					<li><a href="http://localhost:8080/group2_sws_prj/rental/rental_list.html">´ë¿© °ü¸®</a></li>
-					<li><a href="http://localhost:8080/group2_sws_prj/ticket/ticket_list.html">ÀÌ¿ë±Ç °ü¸®</a></li>
-					<li><a href="http://localhost:8080/group2_sws_prj/admin/admin_list.html">°ü¸®ÀÚ °ü¸®</a></li>
-					<li><a href="http://localhost:8080/group2_sws_prj/notice/notice_list.html">°øÁö »çÇ×</a></li>
-				</ul>
+					<li><a href="${path}/group2_sws_prj/member.do">íšŒì› ê´€ë¦¬</a></li>
+					<li><a href="${path}/group2_sws_prj/question.do">ë¬¸ì˜ ê´€ë¦¬</a></li>
+					<li><a href="${path}/group2_sws_prj/product.do">ìƒí’ˆ ê´€ë¦¬</a></li>
+					<li><a href="${path}/group2_sws_prj/rental.do">ëŒ€ì—¬ ê´€ë¦¬</a></li>
+					<li><a href="${path}/group2_sws_prj/ticket.do">ì´ìš©ê¶Œ ê´€ë¦¬</a></li>
+					<li><a href="${path}/group2_sws_prj/admin.do">ê´€ë¦¬ì ê´€ë¦¬</a></li>
+					<li><a href="${path}/group2_sws_prj/notice.do">ê³µì§€ ì‚¬í•­</a></li>
+					</ul>
 			</div>
 
 
 
 			<div id="content">
 			
-				<h1> È¸¿ø Á¤º¸</h1>
+				<h1> íšŒì› ì •ë³´</h1>
 				
-				 ÇÁ·ÎÇÊ
+				 í”„ë¡œí•„
 
 				<div id="profilebox">
 
@@ -148,33 +104,33 @@
 							<tr>
 								<th id="photo" colspan="5" rowspan="5"></th>
 								<th class="white" rowspan="5"></th>
-								<td class="tg-0pky" colspan="2">È¸¿ø ¹øÈ£</td>
+								<td class="tg-0pky" colspan="2">íšŒì› ë²ˆí˜¸</td>
 								<td class="tg-0pky" colspan="2"> mem0001</td>
 								<th class="white" rowspan="5"></th>
 								<th class="white" rowspan="5"></th>
-								<td class="tg-0pky" colspan="2">»ó¼¼Á¤º¸</td>
+								<td class="tg-0pky" colspan="2">ìƒì„¸ì •ë³´</td>
 								<td class="tg-0pky" colspan="2"></td>
 							</tr>
 							<tr>
 								<td class="tg-0pky" colspan="2">ID</td>
 								<td class="tg-0pky" colspan="2">kyeong</td>
-								<td class="tg-0pky" colspan="2">ÁÖ°ÅÁö</td>
-								<td class="tg-0pky" colspan="2">°æ±âµµ ±¸¸®½Ã ¾ÈÃ¢µ¿</td>
+								<td class="tg-0pky" colspan="2">ì£¼ê±°ì§€</td>
+								<td class="tg-0pky" colspan="2">ê²½ê¸°ë„ êµ¬ë¦¬ì‹œ ì•ˆì°½ë™</td>
 							</tr>
 							<tr>
-								<td class="tg-0pky" colspan="2">¼º¸í</td>
-								<td class="tg-0pky" colspan="2">°æÁ¦Çö</td>
-								<td class="tg-0pky" colspan="2">ÀüÈ­</td>
+								<td class="tg-0pky" colspan="2">ì„±ëª…</td>
+								<td class="tg-0pky" colspan="2">ê²½ì œí˜„</td>
+								<td class="tg-0pky" colspan="2">ì „í™”</td>
 								<td class="tg-0pky" colspan="2">010-3333-2222</td>
 							</tr>
 							<tr>
-								<td class="tg-0pky" colspan="2">°¡ÀÔÀÏ</td>
+								<td class="tg-0pky" colspan="2">ê°€ì…ì¼</td>
 								<td class="tg-0pky" colspan="2">20180627</td>
 								<td class="tg-0pky" colspan="2">E-mail</td>
 								<td class="tg-0pky" colspan="2">economy@cc.com</td>
 							</tr>
 							<tr>
-								<td class="tg-0pky" colspan="2">»óÅÂ</td>
+								<td class="tg-0pky" colspan="2">ìƒíƒœ</td>
 								<td class="tg-0pky" colspan="2"></td>
 								<td class="tg-0pky" colspan="2"></td>
 								<td class="tg-0pky" colspan="2"></td>
@@ -186,7 +142,7 @@
 				</div>
 
 
-				<h1>ÀÌ¿ë±Ç ³»¿ª</h1>
+				<h1>ì´ìš©ê¶Œ ë‚´ì—­</h1>
 
 				<div>
 
@@ -198,20 +154,20 @@
 						<thead>
 							<tr style="height: 30px;">
 								<th
-									style="width: 60px; border-bottom: 1px solid #6093E7; vertical-align: middle; text-align: center;">¹øÈ£</th>
+									style="width: 60px; border-bottom: 1px solid #6093E7; vertical-align: middle; text-align: center;">ë²ˆí˜¸</th>
 								<th
-									style="width: 300px; border-bottom: 1px solid #6093E7; vertical-align: middle; text-align: center;">ÀÌ¿ë±Ç
-									Á¾·ù</th>
+									style="width: 300px; border-bottom: 1px solid #6093E7; vertical-align: middle; text-align: center;">ì´ìš©ê¶Œ
+									ì¢…ë¥˜</th>
 								<th
-									style="width: 120px; border-bottom: 1px solid #6093E7; vertical-align: middle; text-align: center;">±¸¸Å³¯Â¥</th>
+									style="width: 120px; border-bottom: 1px solid #6093E7; vertical-align: middle; text-align: center;">êµ¬ë§¤ë‚ ì§œ</th>
 								<th
-									style="width: 150px; border-bottom: 1px solid #6093E7; vertical-align: middle; text-align: center;">»ç¿ë±â°£</th>
+									style="width: 150px; border-bottom: 1px solid #6093E7; vertical-align: middle; text-align: center;">ì‚¬ìš©ê¸°ê°„</th>
 								<th
-									style="width: 180px; border-bottom: 1px solid #6093E7; vertical-align: middle; text-align: center;">ÀÌ¹ø¿ù
-									»ç¿ë È½¼ö</th>
+									style="width: 180px; border-bottom: 1px solid #6093E7; vertical-align: middle; text-align: center;">ì´ë²ˆì›”
+									ì‚¬ìš© íšŸìˆ˜</th>
 								<th
-									style="width: 180px; border-bottom: 1px solid #6093E7; vertical-align: middle; text-align: center;">ÀüÃ¼
-									È½¼ö</th>
+									style="width: 180px; border-bottom: 1px solid #6093E7; vertical-align: middle; text-align: center;">ì „ì²´
+									íšŸìˆ˜</th>
 							</tr>
 						</thead>
 
@@ -247,7 +203,7 @@
 								<tr>
 									<td colspan="7"
 										style="text-align: center; border-bottom: 1px solid #6093E7">
-										ÀÌ¿ë±Ç »ç¿ë ³»¿ªÀÌ ¾ø½À´Ï´Ù.<br />
+										ì´ìš©ê¶Œ ì‚¬ìš© ë‚´ì—­ì´ ì—†ìŠµë‹ˆë‹¤.<br />
 
 									</td>
 								</tr>
@@ -261,22 +217,22 @@
 
 				<div>
 
-					<h1>»óÇ° ´ë¿© ³»¿ª</h1>
+					<h1>ìƒí’ˆ ëŒ€ì—¬ ë‚´ì—­</h1>
 
 					<table
 						style="margin: 0px auto; border-top: 2px solid #6093E7; border-spacing: 0px; width:964px">
 						<thead>
 							<tr style="height: 30px;">
 								<th
-									style="width: 60px; border-bottom: 1px solid #6093E7; vertical-align: middle; text-align: center;">¹øÈ£</th>
+									style="width: 60px; border-bottom: 1px solid #6093E7; vertical-align: middle; text-align: center;">ë²ˆí˜¸</th>
 								<th
-									style="width: 300px; border-bottom: 1px solid #6093E7; vertical-align: middle; text-align: center;">»óÇ°¸í</th>
+									style="width: 300px; border-bottom: 1px solid #6093E7; vertical-align: middle; text-align: center;">ìƒí’ˆëª…</th>
 								<th
-									style="width: 120px; border-bottom: 1px solid #6093E7; vertical-align: middle; text-align: center;">´ë¿©³¯Â¥</th>
+									style="width: 120px; border-bottom: 1px solid #6093E7; vertical-align: middle; text-align: center;">ëŒ€ì—¬ë‚ ì§œ</th>
 								<th
-									style="width: 150px; border-bottom: 1px solid #6093E7; vertical-align: middle; text-align: center;">¹İ³³³¯Â¥</th>
+									style="width: 150px; border-bottom: 1px solid #6093E7; vertical-align: middle; text-align: center;">ë°˜ë‚©ë‚ ì§œ</th>
 								<th
-									style="width: 180px; border-bottom: 1px solid #6093E7; vertical-align: middle; text-align: center;">»óÅÂ</th>
+									style="width: 180px; border-bottom: 1px solid #6093E7; vertical-align: middle; text-align: center;">ìƒíƒœ</th>
 							</tr>
 						</thead>
 						<tbody>
@@ -308,7 +264,7 @@
 								<tr>
 									<td colspan="7"
 										style="text-align: center; border-bottom: 1px solid #6093E7">
-										·»Å» »ç¿ë ³»¿ªÀÌ ¾ø½À´Ï´Ù.<br />
+										ë Œíƒˆ ì‚¬ìš© ë‚´ì—­ì´ ì—†ìŠµë‹ˆë‹¤.<br />
 
 									</td>
 								</tr>
@@ -320,17 +276,18 @@
 
 			</div>
 			<div id="managebutton">
-			<input type="button" value="ÀÌ¸ŞÀÏ º¸³»±â">
-			<input type="button" value="ÀüÃ¼ ÀÌ¿ë±Ç ³»¿ª">
-			<input type="button" value="È¸¿ø Á¤Áö">
-			<input type="button" value="¸ñ·ÏÀ¸·Î">
+			<input type="button" value="ì´ë©”ì¼ ë³´ë‚´ê¸°">
+			<input type="button" value="ì „ì²´ ì´ìš©ê¶Œ ë‚´ì—­">
+			<input type="button" value="íšŒì› ì •ì§€">
+			<input type="button" value="ëª©ë¡ìœ¼ë¡œ">
 			</div>
 		</div>
-		<div id="footer">&copy;2018 BILRIM Designed by GroupTwo</div>
+	</div>
+	<div id="footer">
+	&copy;2018 BILRIM Designed by GroupTwo
 	</div>
 
 </body>
 </html>
-
 
 
