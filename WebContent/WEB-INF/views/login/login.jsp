@@ -27,7 +27,7 @@ $(document).ready(function(){
             return;
         }
         // 폼 내부의 데이터를 전송할 주소
-        document.form1.action="${path}/group2_sws_prj/loginCheck.do"
+        document.form1.action="${path}/group2_sws_prj/loginCheck.do" // git 내려받기 후 에러 날때 메이븐 전체 삭제 후 다시 받고 여기 위치 수정
         // 제출
         document.form1.submit();
     });

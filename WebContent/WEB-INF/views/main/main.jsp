@@ -222,23 +222,23 @@ html, body {
 			<div id="slide_menu" style="background-color: #E1E1E1">
 				<section class="regular slider">
 					<div>
-						<a href="http://localhost:8080/group2_sws_prj/member/member_list.html">
+						<a href="${path}/group2_sws_prj/member.do">
 						<img src="http://localhost:8080/group2_sws_prj/common/img/m_manage.jpg" width="350px" height="300px"></a>
 					</div>
 					<div>
-						<a href="http://localhost:8080/group2_sws_prj/question/question_list.html">
+						<a href="${path}/group2_sws_prj/question.do">
 						<img src="http://localhost:8080/group2_sws_prj/common/img/q_manage.jpg" width="350px" height="300px"></a>
 					</div>
 					<div>
-						<a href="http://localhost:8080/group2_sws_prj/member/product_list.html">
+						<a href="${path}/group2_sws_prj/product.do">
 						<img src="http://localhost:8080/group2_sws_prj/common/img/p_manage.jpg" width="350px" height="300px"></a>
 					</div>
 					<div>
-						<a href="http://localhost:8080/group2_sws_prj/member/rental_list.html">
+						<a href="${path}/group2_sws_prj/rental.do">
 						<img src="http://localhost:8080/group2_sws_prj/common/img/r_manage.jpg" width="350px" height="300px"></a>
 					</div>
 					<div>
-						<a href="http://localhost:8080/group2_sws_prj/member/ticket_list.html">
+						<a href="${path}/group2_sws_prj/ticket.do">
 						<img src="http://localhost:8080/group2_sws_prj/common/img/t_manage.jpg" width="350px" height="300px"></a>
 					</div>
 					<div>
@@ -246,7 +246,7 @@ html, body {
 						<img src="http://localhost:8080/group2_sws_prj/common/img/a_manage.jpg" width="350px" height="300px"></a>
 					</div>
 					<div>
-						<a href="http://localhost:8080/group2_sws_prj/member/notice_list.html">
+						<a href="${path}/group2_sws_prj/notice.do">
 						<img src="http://localhost:8080/group2_sws_prj/common/img/n_manage.jpg" width="350px" height="300px"></a>
 					</div>
 					
