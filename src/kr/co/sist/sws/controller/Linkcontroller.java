@@ -12,7 +12,6 @@ import org.springframework.web.servlet.ModelAndView;
 
 import kr.co.sist.sws.service.LoginserviceImpl;
 import kr.co.sist.sws.vo.Login;
-import kr.co.sist.sws.vo.Manager;
 
 import static org.springframework.web.bind.annotation.RequestMethod.GET; 
 import static org.springframework.web.bind.annotation.RequestMethod.POST;

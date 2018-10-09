@@ -7,7 +7,6 @@ import org.springframework.stereotype.Component;
 
 import kr.co.sist.sws.dao.ManagerDAO;
 import kr.co.sist.sws.vo.Login;
-import kr.co.sist.sws.vo.Manager;
 
 @Component
 public class LoginserviceImpl implements Loginservice {

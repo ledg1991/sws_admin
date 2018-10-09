@@ -3,7 +3,6 @@ package kr.co.sist.sws.service;
 import javax.servlet.http.HttpSession;
 
 import kr.co.sist.sws.vo.Login;
-import kr.co.sist.sws.vo.Manager;
 
    
 
