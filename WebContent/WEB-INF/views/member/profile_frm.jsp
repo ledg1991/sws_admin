@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>관리자 등록 </title>
+<title>회원 상세 정보 </title>
 <%@ include file="../main/header.jsp" %>
 
 <!--  CDN -->

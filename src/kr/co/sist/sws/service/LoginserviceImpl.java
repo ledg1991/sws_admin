@@ -18,17 +18,14 @@ public class LoginserviceImpl implements Loginservice {
     // 01_01. 회원 로그인체크
 	
 	@Override
-	public boolean loginCheck(Login lo) {
-		 boolean result = mDao.loginCheck(lo);
+	public boolean loginCheck(Login lo,HttpSession session) {
+		 boolean result = mDao.loginCheck(lo,session);
+		 
 		
 	        return result;
 	   }
 
-	@Override
-	public Manager viewManager(Manager mv) {
-		// TODO Auto-generated method stub
-		return mDao.viewManager(mv);
-	}
+	
 
 	@Override
 	public void logout(HttpSession session) {

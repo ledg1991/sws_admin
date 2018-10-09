@@ -38,7 +38,7 @@ public class Logincontroller {
 
 	@RequestMapping("loginCheck.do")
 	 public String loginCheck( Login lo,Model m, HttpSession session){
-		boolean result = loginservice.loginCheck(lo);
+		boolean result = loginservice.loginCheck(lo, session);
 		String url="login/login";
         // 로그인 성공
         if(result) {

@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -188,7 +189,7 @@ a:hover {
 					<li id="logo"><span class=logo>BILRIM:빌림</span></li>
 					<li style="float: right"><a href="#" id="current"
 						onmouseover="this.style.color='#ffffff'"
-						onmouseout="this.style.color='#000000'">송재원 대표님 ▼</a>
+						onmouseout="this.style.color='#000000'">${sessionScope.userName}대표님 ▼</a>
 						<ul>
 							<li id="log_out"><a href="${path}/group2_sws_prj/logout.do"
 								onmouseover="document.getElementById('current').style.color='#ffffff'"

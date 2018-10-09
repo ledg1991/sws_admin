@@ -5,6 +5,5 @@ import lombok.Data;
 @Data
 public class Manager {
 
-	public String m_name;
-
+	String userId,userPw;
 }

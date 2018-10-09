@@ -7,7 +7,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 <mapper namespace="manager">
     
     <select id="loginCheck" parameterType="kr.co.sist.sws.vo.Login" resultType="String">
-        SELECT MANAGERNAME  FROM MANAGER
+        SELECT MANAGERNAME  AS userName  FROM MANAGER
         WHERE ID = #{userId} AND PW = #{userPw}
     </select>
     
