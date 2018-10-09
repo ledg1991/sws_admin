@@ -76,67 +76,62 @@ margin-right:10px;
 			<%@ include file="../main/nav.jsp" %> <!-- //목차 -->
 
 
+
+
 			<div id="content">
-			
-				<div id="content_title"><strong>관리자 관리</strong></div>
+			<div id="content_title"><strong>문의 사항</strong></div>
 				<div id="tecket_list_wrap">
 					<table id="tecket_surface_table">
 						<tr>
-							<th id="num">순번</th>
-							<th id="emp_num">사원번호</th>
-							<th id="name">이름</th>
-							<th id="position">직급</th>
-							<th id="input_date">입사일</th>
+							<th id="q_num">글번호</th>
+							<th id="q_name">문의 종류</th>
+							<th id="q_id">ID</th>
+							<th id="q_title">제목</th>
+							<th id="q_date">문의 날짜</th>
+							<th id="q_flag">답변 여부</th>
 						</tr>
 						<tr>
 							<td>1</td>
-							<td>18-000001</td>
-							<td class="title"><a href="#">송재원</a></td>
-							<td>대표이사</td>
-							<td>2018-09-10</td>
+							<td>대여</td>
+							<td>kyong</td>
+							<td ><a href="#">[FAQ]제품을 분실하면 어떻게 해야하나요</a></td>
+							<td>2018-09-18</td>
+							<td>답변</td>
 						</tr>
 						<tr>
-							<td>2</td>
-							<td>18-000002</td>
-							<td class="title"><a href="#">이동근</a></td>
-							<td>털관리부부장</td>
-							<td>2018-09-11</td>
+							<td>1</td>
+							<td>대여</td>
+							<td>kyong</td>
+							<td ><a href="#">[FAQ]제품을 분실하면 어떻게 해야하나요</a></td>
+							<td>2018-09-18</td>
+							<td>답변</td>
 						</tr>
 						<tr>
-							<td>3</td>
-							<td>18-000003</td>
-							<td class="title"><a href="#">강소예</a></td>
-							<td>대리</td>
-							<td>2018-09-12</td>
+							<td>1</td>
+							<td>대여</td>
+							<td>kyong</td>
+							<td ><a href="#">[FAQ]제품을 분실하면 어떻게 해야하나요</a></td>
+							<td>2018-09-18</td>
+							<td>답변</td>
 						</tr>
-						<tr>
-							<td>4</td>
-							<td>18-000004</td>
-							<td class="title"><a href="#">박지영</a></td>
-							<td>차장</td>
-							<td>2018-09-13</td>
-						</tr>
-						<tr>
-							<td>5</td>
-							<td>18-000005</td>
-							<td class="title"><a href="#">경제현</a></td>
-							<td>털관리부사원</td>
-							<td>2018-09-14</td>
-						</tr>
+						
 					</table>
-					
-
-
-			<div id="list_page_wrap">
+					<div id="list_page_wrap">
 					<a href="#">&lt;</a><strong><a href="#">1</a></strong> <a href="#">2</a> <a href="#">3</a> <a href="#">></a>
 					</div>
-					<div id="btn_wrap">
-					<input type="button" onclick="location.href='${path}/group2_sws_prj/admin_insert.do'"  value="추가" name="add" id="add" />
-					</div>
-					
+					<div id="searchID" style="text-align: right;margin-top: 20px">
+			<form action="" method="post" name="searchFrm"	id="searchFrm">
+				
+				<input type="text" name="keyword" class="inputBox"
+					style="width:200px" id="keyword" value="ID로 검색"/>
+				<input type="button" value="검색" id="btnSearch" class="btn"/>
+			</form>
 		</div>
-	</div>
-	</div>
+					
+					
+				</div>
+			</div>
+		</div>
 	</div>
 	<div id="footer">
 	&copy;2018 BILRIM Designed by GroupTwo

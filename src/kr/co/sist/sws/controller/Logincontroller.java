@@ -5,17 +5,12 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.servlet.ModelAndView;
 
 
 import kr.co.sist.sws.service.LoginserviceImpl;
 import kr.co.sist.sws.vo.Login;
-import kr.co.sist.sws.vo.Manager;
 
-import static org.springframework.web.bind.annotation.RequestMethod.GET; 
-import static org.springframework.web.bind.annotation.RequestMethod.POST;
 
 
 import javax.servlet.http.HttpSession;; 
@@ -38,7 +33,7 @@ public class Logincontroller {
 
 	@RequestMapping("loginCheck.do")
 	 public String loginCheck( Login lo,Model m, HttpSession session){
-		boolean result = loginservice.loginCheck(lo);
+		boolean result = loginservice.loginCheck(lo, session);
 		String url="login/login";
         // 로그인 성공
         if(result) {

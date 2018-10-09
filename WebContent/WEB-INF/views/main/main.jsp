@@ -77,50 +77,7 @@
 	});
 </script>
 <style type="text/css">
-#wrap {
-	margin: 0px auto;
-	width: 1200px;
-}
 
-
-#hello {
-	width: 100%;
-	height: 60px;
-}
-
-#hr {
-	wdith: 100%;
-}
-
-#title {
-	float: right;
-	wdith: 200px;
-}
-
-#current {
-	color: #000000;
-}
-
-#current:hover {
-	color: #ffffff;
-}
-
-#contents {
-	min-height: 1000px;
-}
-
-#footer {
-	border-top: 1px solid #e0e0e0;
-	height: 150px;
-	text-align: center;
-	padding-top: 35px;
-	padding-left: 15px;
-}
-
-html, body {
-	margin: 0;
-	padding: 0;
-}
 
 * {
 	box-sizing: border-box;
@@ -128,7 +85,7 @@ html, body {
 
 .slider {
 	width: 80%;
-	margin: 100px auto;
+	margin: 50px auto;
 }
 
 .slick-slide {
@@ -156,6 +113,14 @@ html, body {
 	opacity: 1;
 }
 
+
+
+
+
+html, body {
+	margin: 0;
+	padding: 0;
+}
 #content {
 	min-height: 800px;
 }
@@ -163,22 +128,20 @@ html, body {
 #NoticeBox {
 	background-color: #E0E0E0;
 	width: 450px;
-	height: 300px;
-	margin-top: 50px;
-	margin-top: 50px;
+	height: 350px;
+	margin-top: 30px;
 	margin-left: 100px;
-	margin-bottom: 50px;
+	margin-bottom: 30px;
 	float: left;
 }
 
 #QuestionBox {
 	background-color: #E0E0E0;
 	width: 450px;
-	height: 300px;
-	margin-top: 50px;
-	margin-top: 50px;
+	height: 350px;
+	margin-top: 30px;
 	margin-right: 100px;
-	margin-bottom: 50px;
+	margin-bottom: 30px;
 	float: right;
 }
 
@@ -216,29 +179,30 @@ html, body {
 
 		<div id="content">
 		
+		
 
 			<div style="font-size: 25px; font-style: bold;">원하시는 업무 클릭 해주세요		</div>
 			
 			<div id="slide_menu" style="background-color: #E1E1E1">
 				<section class="regular slider">
 					<div>
-						<a href="http://localhost:8080/group2_sws_prj/member/member_list.html">
+						<a href="${path}/group2_sws_prj/member.do">
 						<img src="http://localhost:8080/group2_sws_prj/common/img/m_manage.jpg" width="350px" height="300px"></a>
 					</div>
 					<div>
-						<a href="http://localhost:8080/group2_sws_prj/question/question_list.html">
+						<a href="${path}/group2_sws_prj/question.do">
 						<img src="http://localhost:8080/group2_sws_prj/common/img/q_manage.jpg" width="350px" height="300px"></a>
 					</div>
 					<div>
-						<a href="http://localhost:8080/group2_sws_prj/member/product_list.html">
+						<a href="${path}/group2_sws_prj/product.do">
 						<img src="http://localhost:8080/group2_sws_prj/common/img/p_manage.jpg" width="350px" height="300px"></a>
 					</div>
 					<div>
-						<a href="http://localhost:8080/group2_sws_prj/member/rental_list.html">
+						<a href="${path}/group2_sws_prj/rental.do">
 						<img src="http://localhost:8080/group2_sws_prj/common/img/r_manage.jpg" width="350px" height="300px"></a>
 					</div>
 					<div>
-						<a href="http://localhost:8080/group2_sws_prj/member/ticket_list.html">
+						<a href="${path}/group2_sws_prj/ticket.do">
 						<img src="http://localhost:8080/group2_sws_prj/common/img/t_manage.jpg" width="350px" height="300px"></a>
 					</div>
 					<div>
@@ -246,7 +210,7 @@ html, body {
 						<img src="http://localhost:8080/group2_sws_prj/common/img/a_manage.jpg" width="350px" height="300px"></a>
 					</div>
 					<div>
-						<a href="http://localhost:8080/group2_sws_prj/member/notice_list.html">
+						<a href="${path}/group2_sws_prj/notice.do">
 						<img src="http://localhost:8080/group2_sws_prj/common/img/n_manage.jpg" width="350px" height="300px"></a>
 					</div>
 					
@@ -259,7 +223,7 @@ html, body {
 				<div id="box">
 					<p style="font-size: 20px; font-weight: bold">공지사항</p>
 					<p style="text-align: right">
-						<a style="text-align: right" href="">+더보기</a>
+						<a style="text-align: right" href="${path}/group2_sws_prj/question.do">+더보기</a>
 					</p>
 
 					<table>
@@ -279,8 +243,8 @@ html, body {
 
 				<div id="box">
 					<p style="font-size: 20px; font-weight: bold">문의사항</p>
-					<p style="text-align: right">
-						<a style="text-align: right">+더보기</a>
+					<p style="text-align: right" >
+						<a style="text-align: right" href="${path}/group2_sws_prj/notice.do">+더보기</a>
 					</p>
 
 					<table>
@@ -299,7 +263,8 @@ html, body {
 
 		
 	</div>
-	<div id="footer">&copy;2018 BILRIM Designed by GroupTwo</div>
+	<div id="footer" >
+	 &copy;2018 BILRIM Designed by GroupTwo</div>
 
 </body>
 </html>

@@ -6,5 +6,7 @@
   <mappers>
   <!--   <mapper resource="data/examMapper.xml"/> -->
    	<mapper resource="data/managerMapper.xml"/>
+   	<mapper resource="data/memberMapper.xml"/>
   </mappers>
+  
 </configuration>

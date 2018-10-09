@@ -1,82 +1,23 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
 <title>관리자 메인 메뉴</title>
 
-<!--  CDN -->
-<!-- SmartMenus core CSS (required) -->
-<link rel="stylesheet" type="text/css"
-	href="http://localhost:8080/group2_sws_prj/common/css/slick.css">
 
 
-
-<script src="https://code.jquery.com/jquery-2.2.0.min.js"
-	type="text/javascript"></script>
-<script src="http://localhost:8080/group2_sws_prj/common/js/slick.min.js"
-	type="text/javascript" charset="utf-8"></script>
 <script type="text/javascript">
-	$(document).on('ready', function() {
-		$(".vertical-center-4").slick({
-			dots : true,
-			vertical : true,
-			centerMode : true,
-			slidesToShow : 4,
-			slidesToScroll : 2
-		});
-		$(".vertical-center-3").slick({
-			dots : true,
-			vertical : true,
-			centerMode : true,
-			slidesToShow : 3,
-			slidesToScroll : 3
-		});
-		$(".vertical-center-2").slick({
-			dots : true,
-			vertical : true,
-			centerMode : true,
-			slidesToShow : 2,
-			slidesToScroll : 2
-		});
-		$(".vertical-center").slick({
-			dots : true,
-			vertical : true,
-			centerMode : true,
-		});
-		$(".vertical").slick({
-			dots : true,
-			vertical : true,
-			slidesToShow : 3,
-			slidesToScroll : 3
-		});
-		$(".regular").slick({
-			dots : true,
-			infinite : true,
-			slidesToShow : 3,
-			slidesToScroll : 3
-		});
-		$(".center").slick({
-			dots : true,
-			infinite : true,
-			centerMode : true,
-			slidesToShow : 5,
-			slidesToScroll : 3
-		});
-		$(".variable").slick({
-			dots : true,
-			infinite : true,
-			variableWidth : true
-		});
-		$(".lazy").slick({
-			lazyLoad : 'ondemand', // ondemand progressive anticipated
-			infinite : true
-		});
-	});
+	
 </script>
 <style type="text/css">
 #wrap {
+	margin: 0px auto;
+	width: 1200px;
+}
+#header {
 	margin: 0px auto;
 	width: 1200px;
 }
@@ -227,7 +168,13 @@ a:hover {
 	float: right;
 	wdith: 200px;
 }
-
+#footer {
+	border-top: 1px solid #e0e0e0;
+	height: 100px;
+	text-align: center;
+	padding-top: 35px;
+	
+}
 
 </style>
 </head>
@@ -242,7 +189,7 @@ a:hover {
 					<li id="logo"><span class=logo>BILRIM:빌림</span></li>
 					<li style="float: right"><a href="#" id="current"
 						onmouseover="this.style.color='#ffffff'"
-						onmouseout="this.style.color='#000000'">송재원 대표님 ▼</a>
+						onmouseout="this.style.color='#000000'">${sessionScope.userName}대표님 ▼</a>
 						<ul>
 							<li id="log_out"><a href="${path}/group2_sws_prj/logout.do"
 								onmouseover="document.getElementById('current').style.color='#ffffff'"
@@ -252,11 +199,12 @@ a:hover {
 			</div>
 
 			
-		</div>
+		
 		<div id="hello">
 			<h1 style=""><span id="title">안녕하세요 대표님</span></h1>
 		</div>
 		<hr id="hr">
+		</div>
 	
 		
 

@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -57,6 +58,11 @@ height:25px;
 margin-right:10px;
 }
 
+#email_content{
+margin:3px;
+width:800px;
+height:400px;
+}
 #btn_wrap{
 	text-align:center;
 	margin-top:50px;
@@ -69,59 +75,50 @@ margin-right:10px;
 
 		
 		<div id="contents">
-			<%@ include file="../main/nav.jsp" %>
+			<%@ include file="../main/nav.jsp" %> <!-- //목차 -->
+
 
 
 
 			<div id="content">
 			
-				<div id="content_title"><strong>관리자 등록</strong></div>
+			<div id="content_title"><strong>이용권 관리</strong></div>
 				<div id="tecket_info_wrap">
 					<table>
 						<tr>
-							<th>사원아이디</th>
-							<td><input type="text" id="e_id"name="e_id"class="inputBox"readonly="readonly">&nbsp; <input type="button" id="id_check" value="중복확인"class="btn"/></td>
+							<th>이용권 명</th>
+							<td><input type="text" id="v_name"name="v_name"class="inputBox"></td>
 						</tr>
 						<tr>
-							<th>비밀번호</th>
-							<td><input type="password" id="e_pass"name="e_pass"class="inputBox"></td>
-						</tr>
-						<tr>
-							<th>비밀번호 확인</th>
-							<td><input type="password" id="e_pass_check"name="e_pass_check"class="inputBox"></td>
-						</tr>
-						<tr>
-							<th>사원명</th>
-							<td><input type="text" id="e_name"name="e_name"class="inputBox"></td>
-						</tr>
-						<tr>
-							<th>사원번호</th>
-							<td><input type="text" id="e_num1"name="e_num1"class="inputBox">-<input type="text" id="e_num2"name="e_num2"class="inputBox"></td>
-						</tr>
-						<tr>
-							<th>프로필 이미지</th>
-							<td><input type="file" id="e_img"name="e_img"></td>
-						</tr>
-						<tr>
-							<th>권한</th>
-							<td><select id="e_authority">
-								<option value="none">=======권한선택======</option>
-								<option value="1">회원 관리</option>
-								<option value="2">문의 관리</option>
-								<option value="3">상품 관리</option>
-								<option value="4">대여 관리</option>
-								<option value="5">공지 사항</option>
+							<th>구분</th>
+							<td><select id="v_category">
+								<option value="none">=======종류선택======</option>
+								<option value="v_shot">단기 이용권</option>
+								<option value="v_long">장기 이용권</option>
 							</select></td>
+						</tr>
+						<tr>
+							<th>이미지</th>
+							<td><input type="file" id="v_img"name="v_img"></td>
+						</tr>
+						<tr>
+							<th>이용권 가격</th>
+							<td><input type="text" id="v_price"name="v_price"class="inputBox">원</td>
+						</tr>
+						<tr>
+							<th>이용권 설명</th>
+							<td><textarea id="v_info">이곳에 이용권의 설명을 적어주세요</textarea></td>
 						</tr>
 					</table>
 					<div id="btn_wrap">
 					<input type="button" id="btn_submit" value="확인" class="btn">
+					<input type="button" value="삭제" name="del" id="del" class="btn"/>
 					<input type="button" id="btn_cancle" value="취소" class="btn">
 					</div>
 				</div>
 			</div>
-	</div>
-	</div>
+		</div>
+				</div>
 	<div id="footer">
 	&copy;2018 BILRIM Designed by GroupTwo
 	</div>
