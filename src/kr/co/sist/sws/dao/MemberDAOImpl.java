@@ -6,9 +6,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import kr.co.sist.sws.vo.Login;
+import kr.co.sist.sws.vo.Member;
 
 @Component// 현재 클래스를 스프링에서 관리하는 dao bean으로 등록
-public class ManagerDAOImpl implements ManagerDAO {
+public class MemberDAOImpl implements MemberDAO {
     // SqlSession 객체를 스프핑에서 생성하여 주입
     // 의존관계 주입(Dependency Injection), 느슨한 결합
     
@@ -17,8 +18,8 @@ public class ManagerDAOImpl implements ManagerDAO {
 	
     // 01_01. 회원 로그인체크
     @Override
-    public boolean loginCheck(Login lo,HttpSession session) {
-        String name = sqlSession.selectOne("manager.loginCheck", lo);
+    public boolean member(Member mo, HttpSession session) {
+        String name = sqlSession.selectOne("member.memberList", mo);
         session.setAttribute("userName", name );
         return (name == null) ? false : true;
     }
@@ -26,8 +27,7 @@ public class ManagerDAOImpl implements ManagerDAO {
     
     // 02. 회원 로그아웃
     @Override
-    public void logout(HttpSession session) {
-    	session.invalidate();
+    public void search(HttpSession session) {
     }
 	
 }

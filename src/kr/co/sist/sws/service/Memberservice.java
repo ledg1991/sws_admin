@@ -1,6 +1,5 @@
 package kr.co.sist.sws.service;
 
-import javax.servlet.http.HttpSession;
 
 import kr.co.sist.sws.vo.Member;
 
@@ -12,7 +11,6 @@ import kr.co.sist.sws.vo.Member;
 	    // 01_02. 회원 검색
 	    
 	    // 02. 회원 상세 정보 출력
-	    public void logout(HttpSession session);
 	}
 
 
