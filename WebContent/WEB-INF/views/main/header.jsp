@@ -189,7 +189,7 @@ a:hover {
 					<li id="logo"><span class=logo>BILRIM:빌림</span></li>
 					<li style="float: right"><a href="#" id="current"
 						onmouseover="this.style.color='#ffffff'"
-						onmouseout="this.style.color='#000000'">${sessionScope.userName}대표님 ▼</a>
+						onmouseout="this.style.color='#000000'">${sessionScope.userName} 관리자 ▼</a>
 						<ul>
 							<li id="log_out"><a href="${path}/group2_sws_prj/logout.do"
 								onmouseover="document.getElementById('current').style.color='#ffffff'"
@@ -201,7 +201,7 @@ a:hover {
 			
 		
 		<div id="hello">
-			<h1 style=""><span id="title">안녕하세요 대표님</span></h1>
+			<h1 style=""><span id="title">안녕하세요 ${sessionScope.userName}님</span></h1>
 		</div>
 		<hr id="hr">
 		</div>

@@ -14,14 +14,10 @@ public class Linkcontroller {
 	
 	@SuppressWarnings("unused")
 	private static final Logger logger = LoggerFactory.getLogger(Linkcontroller.class);
-	@Autowired(required=false)
 	
 	
 	
-	@RequestMapping("member.do")
-	public String memberLink() { 
-		return "member/member_list";
-	}//
+	
 	@RequestMapping("question.do")
 	public String questionLink() { 
 		return "question/question_list";
