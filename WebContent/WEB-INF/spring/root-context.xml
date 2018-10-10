@@ -17,6 +17,7 @@
 	<bean id="ssfb" class="org.mybatis.spring.SqlSessionFactoryBean">
 		<property name="dataSource" ref="dataSource"/>
 		<property name="configLocation" value="WEB-INF/spring/mybatis/mybatisConfig.xml"/>
+		<property name="mapperLocations" value="classpath:data/**/*Mapper.xml"></property>
 	</bean>
 	<!-- 3.MyBatis Handler를 사용하기 위해 SqlSessionTemplate를 생성 후 의존성 주입 -->
 	<bean id="sst" class="org.mybatis.spring.SqlSessionTemplate">

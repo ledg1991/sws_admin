@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import kr.co.sist.sws.service.LoginserviceImpl;
 import kr.co.sist.sws.vo.Login;
 
-
+import static org.springframework.web.bind.annotation.RequestMethod.GET;
 
 import javax.servlet.http.HttpSession;; 
 
@@ -26,7 +26,7 @@ public class Logincontroller {
 	@Autowired(required=false)
 	LoginserviceImpl loginservice;
 	
-	@RequestMapping("login.do")
+	@RequestMapping(value="/login.do",method=GET)
 	public String login() { 
 		return "login/login";
 	}//hello
