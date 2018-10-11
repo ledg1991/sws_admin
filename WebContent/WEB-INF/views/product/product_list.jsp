@@ -77,7 +77,7 @@ margin-right:10px;
 		
 		<div id="contents">
 			
-	<%@ include file="../main/nav.jsp" %> // 목차
+	<%@ include file="../main/nav.jsp" %> <!-- 목록 -->
 
 
 			<div id="content">

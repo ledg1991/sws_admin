@@ -6,6 +6,7 @@
  <mappers>
  <mapper resource="data/managerMapper.xml"/>
  <mapper resource="data/memberMapper.xml"/>
+ <mapper resource="data/inquiryMapper.xml"/>
  
  </mappers>
 </configuration>

@@ -19,6 +19,7 @@ public class InquiryDAOImpl implements InquiryDAO {
     @Override
     public List<Inquiry> inquirylist(){
     	List<Inquiry> list=sqlSession.selectList("inquiry.inquirylist");
+    	System.out.println("daoimpl------------------"+list);
     	return list;
     }
    

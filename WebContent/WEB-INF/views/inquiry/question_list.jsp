@@ -84,29 +84,28 @@ margin-right:10px;
 					<table id="tecket_surface_table">
 						<thred><tr>
 							<th id="q_num">글번호</th>
-							<th id="q_name">문의 종류</th>
 							<th id="q_id">ID</th>
+							<th id="q_name">문의 종류</th>
 							<th id="q_title">제목</th>
 							<th id="q_date">문의 날짜</th>
 							<th id="q_flag">답변 여부</th>
 						</tr></thred>
 						 <tbody>
-						 <c:set>count=0</c:set>
+						 
                         <c:forEach items="${i_list}" var="inquiry">
+                        <c:set var="count" value="${count+1}"/>
                             <tr>
                             
-                            <td><c:out value=count++></c:out></td>
-                                <td>${inquiry.iType}</td>
+                            	<td><c:out value="${count}"/></td>
+                            
                                 <td>${inquiry.mId}</td>
+                                <td>${inquiry.iType}</td>
                                 <td>${inquiry.iTitle}</td>
                                 <td>${inquiry.iDate}</td>
-                                <td>${inquiry.iCheck}</td>
-                                <td>
-                                
-                                <c:set var="status" value="${memberVO.mStatus}" />
-
-							<c:choose> <c:when test="${status eq '0'}">  정상    </c:when>
-						    <c:otherwise>    정지    </c:otherwise> </c:choose> </td>
+                                <td>                                
+                                <c:set var="status" value="${inquiry.iCheck}" />
+							<c:choose> <c:when test="${status eq '0'}">  답변 대기중   </c:when>
+						    <c:otherwise>    답변    </c:otherwise> </c:choose> </td>
                             </tr>
                         </c:forEach>
                         </tbody>
