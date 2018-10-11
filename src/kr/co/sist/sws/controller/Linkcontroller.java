@@ -18,10 +18,7 @@ public class Linkcontroller {
 	
 	
 	
-	@RequestMapping("question.do")
-	public String questionLink() { 
-		return "question/question_list";
-	}//
+	
 	@RequestMapping("product.do")
 	public String productLink() { 
 		return "product/product_list";

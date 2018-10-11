@@ -4,32 +4,32 @@ package kr.co.sist.sws.vo;
 
 public class Inquiry {
 
-	String lType, lTitle, lDate, lCheck,mNumber,mId;
+	String iType, iTitle, iDate, iCheck, mNumber,mId;
 
-	public Inquiry(String lType, String lTitle, String lDate, String lCheck, String mNumber, String mId) {
+	public Inquiry(String iType, String iTitle, String iDate, String iCheck, String mNumber, String mId) {
 		super();
-		this.lType = lType;
-		this.lTitle = lTitle;
-		this.lDate = lDate;
-		this.lCheck = lCheck;
+		this.iType = iType;
+		this.iTitle = iTitle;
+		this.iDate = iDate;
+		this.iCheck = iCheck;
 		this.mNumber = mNumber;
 		this.mId = mId;
 	}
 
-	public String getlType() {
-		return lType;
+	public String getiType() {
+		return iType;
 	}
 
-	public String getlTitle() {
-		return lTitle;
+	public String getiTitle() {
+		return iTitle;
 	}
 
-	public String getlDate() {
-		return lDate;
+	public String getiDate() {
+		return iDate;
 	}
 
-	public String getlCheck() {
-		return lCheck;
+	public String getiCheck() {
+		return iCheck;
 	}
 
 	public String getmNumber() {
@@ -42,9 +42,12 @@ public class Inquiry {
 
 	@Override
 	public String toString() {
-		return "Inquiry [lType=" + lType + ", lTitle=" + lTitle + ", lDate=" + lDate + ", lCheck=" + lCheck
+		return "Inquiry [iType=" + iType + ", iTitle=" + iTitle + ", iDate=" + iDate + ", iCheck=" + iCheck
 				+ ", mNumber=" + mNumber + ", mId=" + mId + "]";
 	}
+
+	
+	
 	
 	
 	

@@ -82,39 +82,34 @@ margin-right:10px;
 			<div id="content_title"><strong>문의 사항</strong></div>
 				<div id="tecket_list_wrap">
 					<table id="tecket_surface_table">
-						<tr>
+						<thred><tr>
 							<th id="q_num">글번호</th>
 							<th id="q_name">문의 종류</th>
 							<th id="q_id">ID</th>
 							<th id="q_title">제목</th>
 							<th id="q_date">문의 날짜</th>
 							<th id="q_flag">답변 여부</th>
-						</tr>
-						<tr>
-							<td>1</td>
-							<td>대여</td>
-							<td>kyong</td>
-							<td ><a href="#">[FAQ]제품을 분실하면 어떻게 해야하나요</a></td>
-							<td>2018-09-18</td>
-							<td>답변</td>
-						</tr>
-						<tr>
-							<td>1</td>
-							<td>대여</td>
-							<td>kyong</td>
-							<td ><a href="#">[FAQ]제품을 분실하면 어떻게 해야하나요</a></td>
-							<td>2018-09-18</td>
-							<td>답변</td>
-						</tr>
-						<tr>
-							<td>1</td>
-							<td>대여</td>
-							<td>kyong</td>
-							<td ><a href="#">[FAQ]제품을 분실하면 어떻게 해야하나요</a></td>
-							<td>2018-09-18</td>
-							<td>답변</td>
-						</tr>
-						
+						</tr></thred>
+						 <tbody>
+						 <c:set>count=0</c:set>
+                        <c:forEach items="${i_list}" var="inquiry">
+                            <tr>
+                            
+                            <td><c:out value=count++></c:out></td>
+                                <td>${inquiry.iType}</td>
+                                <td>${inquiry.mId}</td>
+                                <td>${inquiry.iTitle}</td>
+                                <td>${inquiry.iDate}</td>
+                                <td>${inquiry.iCheck}</td>
+                                <td>
+                                
+                                <c:set var="status" value="${memberVO.mStatus}" />
+
+							<c:choose> <c:when test="${status eq '0'}">  정상    </c:when>
+						    <c:otherwise>    정지    </c:otherwise> </c:choose> </td>
+                            </tr>
+                        </c:forEach>
+                        </tbody>
 					</table>
 					<div id="list_page_wrap">
 					<a href="#">&lt;</a><strong><a href="#">1</a></strong> <a href="#">2</a> <a href="#">3</a> <a href="#">></a>

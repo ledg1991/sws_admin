@@ -190,7 +190,7 @@ html, body {
 						<img src="http://localhost:8080/group2_sws_prj/common/img/m_manage.jpg" width="350px" height="300px"></a>
 					</div>
 					<div>
-						<a href="${path}/group2_sws_prj/question.do">
+						<a href="${path}/group2_sws_prj/inquiry.do">
 						<img src="http://localhost:8080/group2_sws_prj/common/img/q_manage.jpg" width="350px" height="300px"></a>
 					</div>
 					<div>
@@ -223,7 +223,7 @@ html, body {
 				<div id="box">
 					<p style="font-size: 20px; font-weight: bold">공지사항</p>
 					<p style="text-align: right">
-						<a style="text-align: right" href="${path}/group2_sws_prj/question.do">+더보기</a>
+						<a style="text-align: right" href="${path}/group2_sws_prj/inquiry.do">+더보기</a>
 					</p>
 
 					<table>

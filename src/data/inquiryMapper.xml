@@ -4,10 +4,14 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
  
 <!-- 다른 mapper와 중복되지 않도록 네임스페이스 기재 -->
-<mapper namespace="Inquiry">
+<mapper namespace="inquiry">
     
-    <select id="inquiryList"  resultType="kr.co.sist.sws.vo.Inquiry">
-        
+    <select id="inquirylist"  resultType="kr.co.sist.sws.vo.Inquiry">
+        select i.I_TYPE as iType, i.TITLE as iTitle, to_char(i.INPUT_DATE,'yy-mm-dd') as iDate,
+        i.ANSWER_CHECK as iCheck, m.MEMBER_NUMBER as mNumber, m.id as mId
+        from inquiry i, member m
+        where i.MEMBER_NUMBER=m.MEMBER_NUMBER
+        order by iDate desc
         
     </select>    
     
