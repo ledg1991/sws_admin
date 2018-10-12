@@ -82,7 +82,6 @@ td{ text-align:center; }
                         </tbody>
 					</table>
 					<div id="list_page_wrap">
-					<a href="#">&lt;</a><strong><a href="#">1</a></strong> <a href="#">2</a> <a href="#">3</a> <a href="#">></a>
 					</div>
 					<div id="searchID" style="text-align: right;margin-top: 20px">
 			<form action="" method="post" name="searchFrm"	id="searchFrm">

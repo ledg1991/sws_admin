@@ -6,7 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
-
+import org.springframework.web.bind.support.SessionStatus;
 
 import kr.co.sist.sws.service.LoginserviceImpl;
 import kr.co.sist.sws.vo.Login;
@@ -33,6 +33,7 @@ public class Logincontroller {
 
 	@RequestMapping("loginCheck.do")
 	 public String loginCheck( Login lo,Model m, HttpSession session){
+		
 		boolean result = loginservice.loginCheck(lo, session);
 		String url="login/login";
         // 로그인 성공
@@ -51,11 +52,11 @@ public class Logincontroller {
 
     // 3. 관리자 로그아웃
     @RequestMapping("logout.do")
-    public String logout(HttpSession session,Model m){
+    public String logout(SessionStatus session,Model m){
     	String url="login/login";
     	String msg="logout";
     	m.addAttribute("msg",msg);
-    	
+    	session.isComplete();
         return url;
     }
 	

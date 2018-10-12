@@ -9,6 +9,9 @@
  <mapper resource="data/inquiryMapper.xml"/>
  <mapper resource="data/productMapper.xml"/>
  <mapper resource="data/rentalMapper.xml"/>
+ <mapper resource="data/ticketMapper.xml"/>
+ <mapper resource="data/adminMapper.xml"/>
+ <mapper resource="data/noticeMapper.xml"/>
  
  </mappers>
 </configuration>

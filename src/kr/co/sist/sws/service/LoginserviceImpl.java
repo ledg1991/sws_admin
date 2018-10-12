@@ -4,6 +4,7 @@ import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+import org.springframework.web.bind.support.SessionStatus;
 
 import kr.co.sist.sws.dao.ManagerDAO;
 import kr.co.sist.sws.vo.Login;
@@ -27,11 +28,11 @@ public class LoginserviceImpl implements Loginservice {
 	
 
 	@Override
-	public void logout(HttpSession session) {
+	public void logout(SessionStatus session) {
 		// 세션 변수 개별 삭제
         // session.removeAttribute("userId");
         // 세션 정보를 초기화 시킴
-        session.invalidate();
+        session.isComplete();
 		
 	}
 }

@@ -23,18 +23,16 @@ import static org.springframework.web.bind.annotation.RequestMethod.GET;
 
 
 @Controller
-public class SearchMembercontroller {
+public class Pagecontroller {
 	
-	@SuppressWarnings("unused")
-	private static final Logger logger = LoggerFactory.getLogger(SearchMembercontroller.class);
 	@Autowired(required=false)
 	AdminserviceImpl admin;
 	
+	private static final Logger logger = LoggerFactory.getLogger(Pagecontroller.class);
+	
+	
 	@RequestMapping(value="search.do", method=GET)
 	public String searchMember(Model m) { 
-		List<Admin> list=admin.adminlist();
-		m.addAttribute("a_list",list);
-	
 		return "admin/admin_list";
 	}
 		

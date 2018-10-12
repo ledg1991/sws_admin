@@ -70,6 +70,12 @@ $(document).ready(function(){
                         로그아웃되었습니다.
                     </div>
                 </c:if>
+                
+       <c:if test="${msg == 'required'}">
+                    <div style="color: red">
+                        로그인이 필요합니다.
+                    </div>
+                </c:if>
                 </form>
 	</div>
 	

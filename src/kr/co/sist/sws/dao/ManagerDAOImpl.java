@@ -4,6 +4,7 @@ import javax.servlet.http.HttpSession;
 import org.apache.ibatis.session.SqlSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+import org.springframework.web.bind.support.SessionStatus;
 
 import kr.co.sist.sws.vo.Login;
 
@@ -20,14 +21,15 @@ public class ManagerDAOImpl implements ManagerDAO {
     public boolean loginCheck(Login lo,HttpSession session) {
         String name = sqlSession.selectOne("manager.loginCheck", lo);
         session.setAttribute("userName", name );
+        
         return (name == null) ? false : true;
     }
    
     
     // 02. 회원 로그아웃
     @Override
-    public void logout(HttpSession session) {
-    	session.invalidate();
+    public void logout(SessionStatus session) {
+    	session.isComplete();
     }
 	
 }
