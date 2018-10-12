@@ -4,48 +4,38 @@ package kr.co.sist.sws.vo;
 
 public class Product {
 
-	String iType, iTitle, iDate, iCheck, mNumber,mId;
-
-	public Product(String iType, String iTitle, String iDate, String iCheck, String mNumber, String mId) {
+	String pImg,pName;
+	int pCount,pPrice;
+	
+	public Product() {
 		super();
-		this.iType = iType;
-		this.iTitle = iTitle;
-		this.iDate = iDate;
-		this.iCheck = iCheck;
-		this.mNumber = mNumber;
-		this.mId = mId;
+		// TODO Auto-generated constructor stub
 	}
-
-	public String getiType() {
-		return iType;
+	public Product(String pImg, String pName, int pCount, int pPrice) {
+		super();
+		this.pImg = pImg;
+		this.pName = pName;
+		this.pCount = pCount;
+		this.pPrice = pPrice;
 	}
-
-	public String getiTitle() {
-		return iTitle;
+	public String getpImg() {
+		return pImg;
 	}
-
-	public String getiDate() {
-		return iDate;
+	public String getpName() {
+		return pName;
 	}
-
-	public String getiCheck() {
-		return iCheck;
+	public int getpCount() {
+		return pCount;
 	}
-
-	public String getmNumber() {
-		return mNumber;
+	public int getpPrice() {
+		return pPrice;
 	}
-
-	public String getmId() {
-		return mId;
-	}
-
 	@Override
 	public String toString() {
-		return "Inquiry [iType=" + iType + ", iTitle=" + iTitle + ", iDate=" + iDate + ", iCheck=" + iCheck
-				+ ", mNumber=" + mNumber + ", mId=" + mId + "]";
+		return "Product [pImg=" + pImg + ", pName=" + pName + ", pCount=" + pCount + ", pPrice=" + pPrice + "]";
 	}
-
+	
+	
 	
 	
 	

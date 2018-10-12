@@ -19,33 +19,13 @@ public class Linkcontroller {
 	
 	
 	
-	@RequestMapping("product.do")
-	public String productLink() { 
-		return "product/product_list";
-	}//
-	@RequestMapping("rental.do")
-	public String rentalLink() { 
-		return "rental/rental_list";
-	}//
-	@RequestMapping("ticket.do")
-	public String ticketLink() { 
-		return "ticket/ticket_list";
-	}//
 	
 	
-	@RequestMapping("admin.do")
-	public String adminLink() { 
-		return "admin/admin_list";
-	}//
 	@RequestMapping("admin_insert.do")
 	public String admin_insertLink() { 
 		return "admin/admin_insert";
 	}//h
 
-	@RequestMapping("notice.do")
-	public String noticeLink() { 
-		return "notice/notice_list";
-	}//
 	
 	
 	

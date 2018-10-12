@@ -7,6 +7,8 @@
  <mapper resource="data/managerMapper.xml"/>
  <mapper resource="data/memberMapper.xml"/>
  <mapper resource="data/inquiryMapper.xml"/>
+ <mapper resource="data/productMapper.xml"/>
+ <mapper resource="data/rentalMapper.xml"/>
  
  </mappers>
 </configuration>

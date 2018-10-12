@@ -82,41 +82,39 @@ margin-right:10px;
 
 			<div id="content">
 			<div id="content_title"><strong>상품 목록</strong></div>
-    <table >
-        <tr>
-            <th>상품ID번호</th>
-            <th>상품이미지</th>
-            <th>상품명</th>
-            <th>가격</th>
-        </tr>
-        <c:forEach var="row" items="${list}">
-        <tr>
-            <td>
-                ${row.productId}
-            </td>
-            <td>
-                <a href="${path}/shop/product/detail/${row.productId}">
-                    <img src="${path}/images/${row.productUrl}" width="120ox" height="110px">
-                </a>
-            </td>
-            <td>
-                <a href="${path}/shop/product/detail/${row.productId}">${row.productName}</a>
-            </td>
-            <td>
-                <fmt:formatNumber value="${row.productPrice}" pattern="###,###,###"/>
-            </td>
-        </tr>
-        </c:forEach>
-    </table>
-			
-		<div id="list_page_wrap">
+    <table id="tecket_surface_table">
+						<thred><tr>
+							<th>번호</th>
+							<th>상품이미지</th>
+							<th>상품명</th>
+							<th>가격</th>
+							<th>수량</th>
+						</tr></thred>
+						 <tbody>
+						 
+                        <c:forEach items="${p_list}" var="product">
+                        <c:set var="count" value="${count+1}"/>
+                            <tr>
+                            
+                            	<td><c:out value="${count}"/></td>
+                            
+                                <td>${product.pImg}</td>
+                                <td>${product.pName}</td>
+                                <td>${product.pPrice}</td>
+                                <td>${product.pCount}</td>
+                        </c:forEach>
+                        </tbody>
+					</table>
+					<div id="list_page_wrap">
 					<a href="#">&lt;</a><strong><a href="#">1</a></strong> <a href="#">2</a> <a href="#">3</a> <a href="#">></a>
 					</div>
-					<div id="btn_wrap">
-					<input type="button" value="추가" name="add" id="add"/>
-					</div>
-					
-		
+					<div id="searchID" style="text-align: right;margin-top: 20px">
+			<form action="" method="post" name="searchFrm"	id="searchFrm">
+				
+				<input type="text" name="keyword" class="inputBox"
+					style="width:200px" id="keyword" value="상품명으로 검색"/>
+				<input type="button" value="검색" id="btnSearch" class="btn"/>
+			</form>
 	</div>
 	</div>
 	</div>
