@@ -46,5 +46,19 @@ public class MemberListcontroller {
 		return url;
 	}
 	
+	@RequestMapping(value="profile.do" , method=GET)
+	public String profile(HttpSession session, String mNumber,Model m) {
+		String url="member/profile_frm";
+			Member p_list=member.profile(mNumber);
+			System.out.println(mNumber);
+			m.addAttribute("p_list",p_list);
+		
+		
+	
+		return url;
+	}
+	
+	
+	
 		
 }//class

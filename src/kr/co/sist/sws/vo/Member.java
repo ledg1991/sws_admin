@@ -1,13 +1,16 @@
 package kr.co.sist.sws.vo;
 
-import lombok.Data;
 
 
 public class Member {
 
 	String mNumber, mId, mName, mEmail, mDate, mStatus;
 
-	
+	public Member() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
 	public Member(String mNumber, String mId, String mName, String mEmail, String mDate, String mStatus) {
 		super();
 		this.mNumber = mNumber;
@@ -47,7 +50,8 @@ public class Member {
 		return "Member [mNumber=" + mNumber + ", mId=" + mId + ", mName=" + mName + ", mEmail=" + mEmail + ", mDate="
 				+ mDate + ", mStatus=" + mStatus + "]";
 	}
-
+	
+	
 	
 	
 	

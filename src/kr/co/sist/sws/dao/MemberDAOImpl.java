@@ -22,6 +22,13 @@ public class MemberDAOImpl implements MemberDAO {
     	List<Member> list=sqlSession.selectList("member.memberlist");
     	return list;
     }
+
+	@Override
+	public Member profile(String mNumber) {
+
+		
+		return sqlSession.selectOne("member.profile",mNumber);
+	}
    
     
    

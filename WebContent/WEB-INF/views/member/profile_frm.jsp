@@ -94,7 +94,7 @@ height:400px;
 								<th id="photo" colspan="5" rowspan="5"></th>
 								<th class="white" rowspan="5"></th>
 								<td class="tg-0pky" colspan="2">회원 번호</td>
-								<td class="tg-0pky" colspan="2"> mem0001</td>
+								<td class="tg-0pky" colspan="2"> ${p_list.mNumber } </td>
 								<th class="white" rowspan="5"></th>
 								<th class="white" rowspan="5"></th>
 								<td class="tg-0pky" colspan="2">상세정보</td>

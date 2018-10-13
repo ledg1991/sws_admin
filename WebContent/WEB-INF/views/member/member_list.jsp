@@ -66,7 +66,7 @@ td{ text-align:center; }
 						 <tbody>
                         <c:forEach items="${list}" var="memberVO">
                             <tr>
-                                <td>${memberVO.mNumber}</td>
+                                <td><a href="${path}/group2_sws_prj/profile.do?mNumber=${memberVO.mNumber}">${memberVO.mNumber}</a></td>
                                 <td>${memberVO.mId}</td>
                                 <td>${memberVO.mName}</td>
                                 <td>${memberVO.mEmail}</td>

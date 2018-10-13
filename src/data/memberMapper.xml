@@ -12,6 +12,13 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         
     </select>    
     
+    <select id="profile"  resultType="kr.co.sist.sws.vo.Member">
+        select MEMBER_NUMBER as mNumber, ID as mId, NAME as mName, EMAIL as mEmail, to_char(INPUT_DATE,'yy-mm-dd') as mDate, STATUS as mStatus
+        
+        from member
+        where MEMBER_NUMBER=#{mNumber} 
+        
+    </select> 
  
 </mapper>
 

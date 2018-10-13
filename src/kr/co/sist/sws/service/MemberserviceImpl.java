@@ -23,5 +23,11 @@ public class MemberserviceImpl implements Memberservice {
 		
 	}
 	
+	public Member profile(String mNumber){
+		return mem_dao.profile(mNumber);
+		
+	}
+	
+	
 
 }
