@@ -31,7 +31,7 @@ public class AdminListcontroller {
 	AdminserviceImpl admin;
 	
 	@RequestMapping(value="admin.do", method=GET)
-	public String inquiry(Model m) { 
+	public String admin(Model m) { 
 		List<Admin> list=admin.adminlist();
 		m.addAttribute("a_list",list);
 	

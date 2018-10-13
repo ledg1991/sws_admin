@@ -2,6 +2,8 @@ package kr.co.sist.sws.controller;
 
 import java.util.List;
 
+import javax.servlet.http.HttpSession;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,6 +13,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import kr.co.sist.sws.service.InquiryserviceImpl;
 import kr.co.sist.sws.vo.Inquiry;
+import kr.co.sist.sws.vo.Member;
+
 import static org.springframework.web.bind.annotation.RequestMethod.GET;
 
 
@@ -26,12 +30,20 @@ public class InquiryListcontroller {
 	InquiryserviceImpl inquiry;
 	
 	@RequestMapping(value="inquiry.do", method=GET)
-	public String inquiry(Model m) { 
-		List<Inquiry> list=inquiry.inquirylist();
-		System.out.println("---------------------------"+list);
-		m.addAttribute("i_list",list);
-	
-		return "inquiry/question_list";
+	public String inquiry(HttpSession session,Model m) { 
+		String url="login/login";
+		String flag=(String) session.getAttribute("userId");
+		if(flag!=null) {
+			List<Inquiry> list=inquiry.inquirylist();
+			m.addAttribute("i_list",list);
+			url="inquiry/question_list";			
+		}			
+		String msg="required";
+		m.addAttribute("msg",msg);
+		
+
+		return url;
 	}
+	
 		
 }//class
