@@ -32,7 +32,7 @@ public class InquiryListcontroller {
 	@RequestMapping(value="inquiry.do", method=GET)
 	public String inquiry(HttpSession session,Model m) { 
 		String url="login/login";
-		String flag=(String) session.getAttribute("userId");
+		String flag=(String) session.getAttribute("userName");
 		if(flag!=null) {
 			List<Inquiry> list=inquiry.inquirylist();
 			m.addAttribute("i_list",list);

@@ -9,7 +9,7 @@ import org.springframework.web.bind.support.SessionStatus;
 import kr.co.sist.sws.vo.Login;
 
 @Component// 현재 클래스를 스프링에서 관리하는 dao bean으로 등록
-public class ManagerDAOImpl implements ManagerDAO {
+public class LoginDAOImpl implements LoginDAO {
     // SqlSession 객체를 스프핑에서 생성하여 주입
     // 의존관계 주입(Dependency Injection), 느슨한 결합
     
@@ -28,8 +28,9 @@ public class ManagerDAOImpl implements ManagerDAO {
     
     // 02. 회원 로그아웃
     @Override
-    public void logout(SessionStatus session) {
-    	session.isComplete();
+    public void logout(SessionStatus session,HttpSession ss) {
+    	ss.removeAttribute("userName");
+    	session.setComplete();
     }
 	
 }

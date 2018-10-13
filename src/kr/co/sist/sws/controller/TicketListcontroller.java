@@ -2,6 +2,8 @@ package kr.co.sist.sws.controller;
 
 import java.util.List;
 
+import javax.servlet.http.HttpSession;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -31,11 +33,21 @@ public class TicketListcontroller {
 	TicketserviceImpl ticket;
 	
 	@RequestMapping(value="ticket.do", method=GET)
-	public String inquiry(Model m) { 
-		List<Ticket> list=ticket.ticketlist();
-		m.addAttribute("t_list",list);
-	
-		return "ticket/ticket_list";
+	public String inquiry(Model m,HttpSession session) { 
+		String url="login/login";
+		String flag=(String) session.getAttribute("userName");
+		if(flag!=null) {
+			List<Ticket> list=ticket.ticketlist();
+			m.addAttribute("t_list",list);
+			url="ticket/ticket_list";			
+		}			
+		String msg="required";
+		m.addAttribute("msg",msg);
+		
+
+		return url;
 	}
+	
+	
 		
 }//class

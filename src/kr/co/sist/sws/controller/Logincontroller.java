@@ -52,11 +52,12 @@ public class Logincontroller {
 
     // 3. 관리자 로그아웃
     @RequestMapping("logout.do")
-    public String logout(SessionStatus session,Model m){
+    public String logout(SessionStatus session,Model m,HttpSession ss){
     	String url="login/login";
     	String msg="logout";
     	m.addAttribute("msg",msg);
-    	session.isComplete();
+    	ss.removeAttribute("userName");
+    	session.setComplete();
         return url;
     }
 	

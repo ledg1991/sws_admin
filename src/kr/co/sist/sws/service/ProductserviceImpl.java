@@ -7,7 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import kr.co.sist.sws.dao.InquiryDAO;
-import kr.co.sist.sws.dao.ManagerDAO;
+import kr.co.sist.sws.dao.LoginDAO;
 import kr.co.sist.sws.dao.MemberDAO;
 import kr.co.sist.sws.dao.ProductDAO;
 import kr.co.sist.sws.vo.Inquiry;

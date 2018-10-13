@@ -2,6 +2,8 @@ package kr.co.sist.sws.controller;
 
 import java.util.List;
 
+import javax.servlet.http.HttpSession;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -29,11 +31,21 @@ public class RentalListcontroller {
 	RentalserviceImpl rental;
 	
 	@RequestMapping(value="rental.do", method=GET)
-	public String inquiry(Model m) { 
-		List<Rental> list=rental.rentallist();
-		m.addAttribute("r_list",list);
-	
-		return "rental/rental_list";
+	public String rental(Model m,HttpSession session) { 
+		String url="login/login";
+		String flag=(String) session.getAttribute("userName");
+		if(flag!=null) {
+			List<Rental> list=rental.rentallist();
+			m.addAttribute("r_list",list);
+			url="rental/rental_list";			
+		}			
+		String msg="required";
+		m.addAttribute("msg",msg);
+		
+
+		return url;
 	}
+	
+	
 		
 }//class

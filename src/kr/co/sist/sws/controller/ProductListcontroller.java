@@ -2,6 +2,8 @@ package kr.co.sist.sws.controller;
 
 import java.util.List;
 
+import javax.servlet.http.HttpSession;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,6 +12,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import kr.co.sist.sws.service.ProductserviceImpl;
+import kr.co.sist.sws.vo.Notice;
 import kr.co.sist.sws.vo.Product;
 
 import static org.springframework.web.bind.annotation.RequestMethod.GET;
@@ -27,11 +30,22 @@ public class ProductListcontroller {
 	ProductserviceImpl product;
 	
 	@RequestMapping(value="product.do", method=GET)
-	public String inquiry(Model m) { 
-		List<Product> list=product.productlist();
-		m.addAttribute("p_list",list);
-	
-		return "product/product_list";
+	public String product(Model m,HttpSession session) { 
+		String url="login/login";
+		String flag=(String) session.getAttribute("userName");
+		if(flag!=null) {
+			List<Product> list=product.productlist();
+			m.addAttribute("p_list",list);
+			url="product/product_list";			
+		}			
+		String msg="required";
+		m.addAttribute("msg",msg);
+		
+
+		return url;
 	}
+	
+	
+	
 		
 }//class

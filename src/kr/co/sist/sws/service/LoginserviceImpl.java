@@ -6,14 +6,14 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.web.bind.support.SessionStatus;
 
-import kr.co.sist.sws.dao.ManagerDAO;
+import kr.co.sist.sws.dao.LoginDAO;
 import kr.co.sist.sws.vo.Login;
 
 @Component
 public class LoginserviceImpl implements Loginservice {
 
 	@Autowired(required=false)
-    ManagerDAO mDao;
+    LoginDAO mDao;
     
     // 01_01. 회원 로그인체크
 	
@@ -28,11 +28,11 @@ public class LoginserviceImpl implements Loginservice {
 	
 
 	@Override
-	public void logout(SessionStatus session) {
+	public void logout(SessionStatus session,HttpSession ss) {
 		// 세션 변수 개별 삭제
-        // session.removeAttribute("userId");
+        ss.removeAttribute("userName");
         // 세션 정보를 초기화 시킴
-        session.isComplete();
+        session.setComplete();
 		
 	}
 }

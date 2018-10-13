@@ -32,7 +32,8 @@ public class MemberListcontroller {
 	@RequestMapping(value="member.do" , method=GET)
 	public String member(HttpSession session, Model m) {
 		String url="login/login";
-		String flag=(String) session.getAttribute("userId");
+		String flag=(String) session.getAttribute("userName");
+		System.out.println(flag);
 		if(flag!=null) {
 			List<Member> list=member.memberlist();
 			m.addAttribute("list",list);
