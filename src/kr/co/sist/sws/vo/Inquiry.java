@@ -4,7 +4,7 @@ package kr.co.sist.sws.vo;
 
 public class Inquiry {
 
-	String iType, iTitle, iDate, iCheck, mNumber,mId,iNumber,iContent;
+	String iType, iTitle, iDate, iCheck, mNumber, mId, iNumber, iContent;
 
 	public Inquiry() {
 		super();
