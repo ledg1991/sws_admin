@@ -1,5 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
     <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
@@ -104,7 +103,7 @@ height:400px;
             <td colspan="2" align="center">
                 <input type="button" id="editBtn" value="수정">
                 <input type="button" id="deltBtn" value="삭제">
-                <input type="button" id="deleteBtn"value="취소" onclick="location.href='${path}/product.do'">
+                <a href="${path}/group2_sws_prj/product.do"><input type="button" id="deleteBtn"value="취소" ></a>
             </td>
         </tr>
     </table>
