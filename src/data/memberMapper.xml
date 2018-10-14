@@ -19,6 +19,18 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         where MEMBER_NUMBER=#{mNumber} 
         
     </select> 
+    <select id="stop"  resultType="kr.co.sist.sws.vo.Member">
+        
+		update member set STATUS='1'
+        where MEMBER_NUMBER=#{mNumber} 
+        
+    </select>
+    <select id="activity"  resultType="kr.co.sist.sws.vo.Member">
+        
+		update member set STATUS='0'
+        where MEMBER_NUMBER=#{mNumber} 
+        
+    </select> 
  
 </mapper>
 

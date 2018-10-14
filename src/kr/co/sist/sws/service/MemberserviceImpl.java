@@ -27,6 +27,18 @@ public class MemberserviceImpl implements Memberservice {
 		return mem_dao.profile(mNumber);
 		
 	}
+
+	@Override
+	public Member m_stop(String mNumber) {
+		// TODO Auto-generated method stub
+		return mem_dao.m_stop(mNumber);
+	}
+
+	@Override
+	public Member actitvity(String mNumber) {
+		// TODO Auto-generated method stub
+		return mem_dao.activity(mNumber);
+	}
 	
 	
 

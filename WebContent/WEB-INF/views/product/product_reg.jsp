@@ -69,14 +69,7 @@ $(document).ready(function(){
         document.form1.action = "${path}/group2_sws_prj/p_insert.do";
         document.form1.submit();
     });
-    // 상품 삭제 버튼 클릭이벤트
-    $("#deleteBtn").click(function(){
-        // 상품 삭제 확인
-        if(confirm("상품을 삭제하시겠습니까?")){
-            document.form1.action = "${path}/shop/product/delete.do";
-            document.form1.submit();
-        }
-    });
+   
     
 });
 
@@ -199,7 +192,7 @@ height:400px;
         <tr>
             <td colspan="2" align="center">
                 <input type="button" id="editBtn" value="등록">
-                <a href="${path}/group2_sws_prj/product.do"><input type="button" id="deleteBtn"value="취소" ></a>
+                <a href="${path}/group2_sws_prj/product.do"><input type="button" id="cancle"value="취소" ></a>
             </td>
         </tr>
     </table>

@@ -15,7 +15,25 @@
 
 
 <script type="text/javascript">
+$(document).ready(function(){
+    // 상품 수정 버튼 클릭이벤트
+    $("#stopBtn").click(function(){
+        var mNumber = ${p_list.mNumber };
+        result = confirm('정지 하시겠습니까');
+        if(result == true){
+        	document.form1.action = "${path}/group2_sws_prj/m_stop.do";
+            document.form1.submit();
+        }else{
+        return false;
+        }
 
+        
+        
+    });
+    
+    
+    
+});
 </script>
 
 <!-- nav css -->
@@ -284,10 +302,10 @@ height:400px;
 
 			</div>
 			<div id="managebutton">
-			<input type="button" value="이메일 보내기">
-			<input type="button" value="전체 이용권 내역">
-			<input type="button" value="회원 정지">
-			<input type="button" value="목록으로">
+			<!-- <input type="button" value="이메일 보내기"> -->
+			<!-- <input type="button" value="전체 이용권 내역"> -->
+			<input type="button" id="stopBtn" value="회원 정지">
+			<a href="${path}/group2_sws_prj/member.do"><input type="button" value="목록으로"></a>
 			</div>
 		</div>
 	</div>

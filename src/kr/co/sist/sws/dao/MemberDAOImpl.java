@@ -29,6 +29,18 @@ public class MemberDAOImpl implements MemberDAO {
 		
 		return sqlSession.selectOne("member.profile",mNumber);
 	}
+
+	@Override
+	public Member m_stop(String mNumber) {
+		// TODO Auto-generated method stub
+		return sqlSession.selectOne("member.stop",mNumber);
+	}
+
+	@Override
+	public Member activity(String mNumber) {
+		// TODO Auto-generated method stub
+		return sqlSession.selectOne("member.activity",mNumber);
+	}
    
     
    
