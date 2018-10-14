@@ -31,6 +31,23 @@ public class ProductserviceImpl implements Productservice {
 		// TODO Auto-generated method stub
 		return p_dao.info(pNum);
 	}
+
+	@Override
+	public void regist(Product pv) {
+		p_dao.regist(pv);
+		
+	}
+
+	@Override
+	public void update(Product pv) {
+		p_dao.update(pv);
+	}
+
+	@Override
+	public void delete(String pNum) {
+		p_dao.delete(pNum);
+		
+	}
     
 	
 	

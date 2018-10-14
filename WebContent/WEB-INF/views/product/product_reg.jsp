@@ -45,21 +45,27 @@ function fnCngList(sVal){
 
 $(document).ready(function(){
     // 상품 수정 버튼 클릭이벤트
-    $("#editBtn").click(function(){
-        var productName = $("#productName").val();
-        var productPrice = $("#productPrice").val();
-        var productDesc = $("#productDesc").val();
+    $("#regBtn").click(function(){
+        var pName = $("#pName").val();
+        var pPrice = $("#pPrice").val();
+        var pRfee = $("#pRfee").val();
+        var pCount = $("#pCount").val();
         // 상품 수정 폼 유효성 검사
-        if(productName == "") {
+        if(pName == "") {
             alert("상품명을 입력해주세요");
-            productName.foucs();
-        } else if (productPrice == "") {
+            pName.foucs();
+        } else if (pPrice == "") {
             alert("상품 가격을 입력해주세요");
-            productPrice.focus();
-        } else if (productDesc == "") {
-            alert("상품 설명을 입력해주세요");
-            productDesc.focus();
+            pPrice.focus();
+        } else if (pRfee == "") {
+            alert("렌탈 가를 입력해주세요");
+            pRfee.focus();
         }
+        else if (pCount == "") {
+            alert("수량을 입력해주세요");
+            pCount.focus();
+        }
+        
         document.form1.action = "${path}/group2_sws_prj/p_insert.do";
         document.form1.submit();
     });
@@ -145,10 +151,10 @@ height:400px;
     <table border="">
         <tr>
             <td>
-                <img src="${path}/images/${p_info.pImg}" height="150px" width="150px">
-                <img src="${path}/images/${p_info.pImg2}" height="150px" width="150px">
-                <img src="${path}/images/${p_info.pImg3}" height="150px" width="150px">
-                <img src="${path}/images/${p_info.pImg4}" height="150px" width="150px">
+                <img src="" height="150px" width="150px">
+                <img src="" height="150px" width="150px">
+                <img src="" height="150px" width="150px">
+                <img src="" height="150px" width="150px">
                 <br>
                 
                 <input type="file" id="productPhoto" name="productPhoto">

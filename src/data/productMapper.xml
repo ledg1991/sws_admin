@@ -20,7 +20,31 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
          from product
          where  PRODUCT_NUM=#{pNum}
         
-    </select>    
+    </select>   
+    
+    <select id="regist"  resultType="kr.co.sist.sws.vo.Product">
+        select PRODUCT_NUM as pNum, CATEGORY as pCat, BRAND as pBrand, PRD_NAME as pName,
+         PRICE as pPrice, RENTAL_FEE as pRfee, to_char(INPUT_DATE,'yy-mm-dd') as pDate, 
+         IMG1 as pImg, IMG2 as pImg2, IMG3 as pImg3, IMG4 as pImg4,
+         PRODUCT_COUNT as pCount, FC_NUM as pFn, SC_NUM as pSn
+         from product
+         where  PRODUCT_NUM=#{pNum}
+        
+    </select> 
+    <select id="update"  resultType="kr.co.sist.sws.vo.Product">
+        select PRODUCT_NUM as pNum, CATEGORY as pCat, BRAND as pBrand, PRD_NAME as pName,
+         PRICE as pPrice, RENTAL_FEE as pRfee, to_char(INPUT_DATE,'yy-mm-dd') as pDate, 
+         IMG1 as pImg, IMG2 as pImg2, IMG3 as pImg3, IMG4 as pImg4,
+         PRODUCT_COUNT as pCount, FC_NUM as pFn, SC_NUM as pSn
+         from product
+         where  PRODUCT_NUM=#{pNum}
+        
+    </select> 
+    <select id="delete"  resultType="kr.co.sist.sws.vo.Product">
+        delete from product
+         where  PRODUCT_NUM=#{pNum}
+        
+    </select>      
     
  
 </mapper>

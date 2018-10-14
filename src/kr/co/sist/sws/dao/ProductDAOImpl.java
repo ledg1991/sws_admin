@@ -27,6 +27,24 @@ public class ProductDAOImpl implements ProductDAO {
 	public Product info(String pNum) {
 		return sqlSession.selectOne("product.product",pNum);
 	}
+
+	@Override
+	public void regist(Product pv) {
+		sqlSession.insert("product.registProduct", pv);
+		
+	}
+
+	@Override
+	public void update(Product pv) {
+		sqlSession.insert("product.insert", pv);
+		
+	}
+
+	@Override
+	public void delete(String pNum) {
+		sqlSession.delete("product.delete", pNum);
+		
+	}
    
     
    

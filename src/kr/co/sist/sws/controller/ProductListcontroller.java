@@ -1,5 +1,6 @@
 package kr.co.sist.sws.controller;
 
+import java.io.File;
 import java.util.List;
 
 import javax.servlet.http.HttpSession;
@@ -16,7 +17,7 @@ import kr.co.sist.sws.vo.Notice;
 import kr.co.sist.sws.vo.Product;
 
 import static org.springframework.web.bind.annotation.RequestMethod.GET;
-
+import static org.springframework.web.bind.annotation.RequestMethod.POST;
 
 
 
@@ -62,6 +63,36 @@ public class ProductListcontroller {
 	
 		return url;
 	}
+	
+	@RequestMapping(value="p_regist.do" , method=POST)
+	public String p_regist(Product pv) {
+		String url="product/product_list";
+		
+            
+            product.regist(pv);
+	
+		return url;
+	}
+	@RequestMapping(value="p_update.do" , method=POST)
+	public String p_update(Product pv) {
+		String url="product/product_list";
+		
+            
+            product.update(pv);
+	
+		return url;
+	}
+	
+	@RequestMapping(value="p_delete.do" , method=POST)
+	public String p_delete(String pNum) {
+		String url="product/product_list";
+		
+            
+            product.delete(pNum);
+	
+		return url;
+	}
+	
 	
 	
 	
