@@ -109,6 +109,7 @@ margin-right:10px;
 					<a href="#">&lt;</a><strong><a href="#">1</a></strong> <a href="#">2</a> <a href="#">3</a> <a href="#">></a>
 					</div>
 					<div id="searchID" style="text-align: right;margin-top: 20px">
+					<input type="button" id="regBtn" value="상품 등록">
 			<form action="" method="post" name="searchFrm"	id="searchFrm">
 				
 				<input type="text" name="keyword" class="inputBox"

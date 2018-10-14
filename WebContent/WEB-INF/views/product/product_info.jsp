@@ -98,25 +98,18 @@ height:400px;
         </tr>
         <tr>
             <td>상품명 : ${p_info.pName}</td>
-        </tr>
-        <tr>
             <td>가격 : ${p_info.pPrice} </td>
-        </tr>
-        <tr>
             <td>렌탈 가 : ${p_info.pRfee} </td>
-        </tr>
-        <tr>
             <td>수량 : ${p_info.pCount} </td>
-        </tr>
-        <tr>
             <td>등록일: ${p_info.pDate} </td>
         </tr>
         
+        
         <tr>
             <td colspan="2" align="center">
-                <input type="hidden" name="productId" value="${vo.productId}">
-                <input type="button" id="editBtn" value="등록">
-                <input type="button" id="deleteBtn"value="취소" onclick="location.href='http://localhost:8080/group2_sws_prj/product/product_list.html'">
+                <input type="button" id="editBtn" value="수정">
+                <input type="button" id="deltBtn" value="삭제">
+                <input type="button" id="deleteBtn"value="취소" onclick="location.href='{path}/group2_sws_prj/product.do'">
             </td>
         </tr>
     </table>
