@@ -18,7 +18,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
          IMG1 as pImg, IMG2 as pImg2, IMG3 as pImg3, IMG4 as pImg4,
          PRODUCT_COUNT as pCount, FC_NUM as pFn, SC_NUM as pSn
          from product
-         where  PRODUCT_NUM=${pNum}
+         where  PRODUCT_NUM=#{pNum}
         
     </select>    
     
