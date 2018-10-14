@@ -26,7 +26,7 @@ public class InquiryDAOImpl implements InquiryDAO {
 	@Override
 	public Inquiry answer(String iNumber) {
 		// TODO Auto-generated method stub
-		return sqlSession.selectOne("Inquiry.profile",iNumber);
+		return sqlSession.selectOne("inquiry.answer",iNumber);
 	}
    
     
