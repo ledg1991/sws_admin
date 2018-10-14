@@ -104,7 +104,7 @@ height:400px;
             <td colspan="2" align="center">
                 <input type="button" id="editBtn" value="수정">
                 <input type="button" id="deltBtn" value="삭제">
-                <input type="button" id="deleteBtn"value="취소" onclick="location.href=${path}'/product.do'">
+                <input type="button" id="deleteBtn"value="취소" onclick="location.href='${path}/product.do'">
             </td>
         </tr>
     </table>
