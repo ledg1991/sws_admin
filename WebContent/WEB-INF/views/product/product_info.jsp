@@ -1,10 +1,11 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
     <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
-<title>관리자 등록 </title>
+<title>상품 정보 </title>
 <%@ include file="../main/header.jsp" %>
 
 <!--  CDN -->
@@ -85,6 +86,7 @@ height:400px;
 <form id="form1" name="form1" enctype="multipart/form-data" method="post">
     <table border="">
         <tr>
+            <td>상품 이미지</td>
             <td>
                 <img src="${path}/images/${p_info.pImg}" height="150px" width="150px">
                 <img src="${path}/images/${p_info.pImg2}" height="150px" width="150px">
@@ -95,15 +97,19 @@ height:400px;
             </td>
         </tr>
         <tr>
-            <td>상품명 : ${p_info.pName} | 가격 : ${p_info.pPrice} | 렌탈 가 : ${p_info.pRfee} | 수량 : ${p_info.pCount} | 등록일: ${p_info.pDate} </td>
+            <td>상품명 : ${p_info.pName}</td>
+            <td>가격 : ${p_info.pPrice} </td>
+            <td>렌탈 가 : ${p_info.pRfee} </td>
+            <td>수량 : ${p_info.pCount} </td>
+            <td>등록일: ${p_info.pDate} </td>
         </tr>
         
         
         <tr>
             <td colspan="2" align="center">
+                <input type="hidden" name="productId" value="${vo.productId}">
                 <input type="button" id="editBtn" value="수정">
-                <input type="button" id="deltBtn" value="삭제">
-                <a href="${path}/group2_sws_prj/product.do"><input type="button" id="deleteBtn"value="취소" ></a>
+                <input type="button" id="deleteBtn"value="취소" onclick="location.href='http://localhost:8080/group2_sws_prj/product/product_list.html'">
             </td>
         </tr>
     </table>

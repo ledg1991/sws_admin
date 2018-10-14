@@ -4,15 +4,14 @@ package kr.co.sist.sws.vo;
 
 public class Product {
 
-	String pNum,pCat,pBrand,pImg,pImg2,pImg3,pImg4,pName,pDate;
+	String pNum,pCat,pBrand,pImg,pImg2,pImg3,pImg4,pName,pDate, pSn, pFn;
 	int pCount, pPrice, pRfee;
-	
 	public Product() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
 	public Product(String pNum, String pCat, String pBrand, String pImg, String pImg2, String pImg3, String pImg4,
-			String pName, String pDate, int pCount, int pPrice, int pRfee) {
+			String pName, String pDate, String pSn, String pFn, int pCount, int pPrice, int pRfee) {
 		super();
 		this.pNum = pNum;
 		this.pCat = pCat;
@@ -23,6 +22,8 @@ public class Product {
 		this.pImg4 = pImg4;
 		this.pName = pName;
 		this.pDate = pDate;
+		this.pSn = pSn;
+		this.pFn = pFn;
 		this.pCount = pCount;
 		this.pPrice = pPrice;
 		this.pRfee = pRfee;
@@ -81,6 +82,18 @@ public class Product {
 	public void setpDate(String pDate) {
 		this.pDate = pDate;
 	}
+	public String getpSn() {
+		return pSn;
+	}
+	public void setpSn(String pSn) {
+		this.pSn = pSn;
+	}
+	public String getpFn() {
+		return pFn;
+	}
+	public void setpFn(String pFn) {
+		this.pFn = pFn;
+	}
 	public int getpCount() {
 		return pCount;
 	}
@@ -102,13 +115,9 @@ public class Product {
 	@Override
 	public String toString() {
 		return "Product [pNum=" + pNum + ", pCat=" + pCat + ", pBrand=" + pBrand + ", pImg=" + pImg + ", pImg2=" + pImg2
-				+ ", pImg3=" + pImg3 + ", pImg4=" + pImg4 + ", pName=" + pName + ", pDate=" + pDate + ", pCount="
-				+ pCount + ", pPrice=" + pPrice + ", pRfee=" + pRfee + "]";
+				+ ", pImg3=" + pImg3 + ", pImg4=" + pImg4 + ", pName=" + pName + ", pDate=" + pDate + ", pSn=" + pSn
+				+ ", pFn=" + pFn + ", pCount=" + pCount + ", pPrice=" + pPrice + ", pRfee=" + pRfee + "]";
 	}
-	
-	
-	
-	
 	
 	
 	
