@@ -98,29 +98,29 @@ height:400px;
 								<th class="white" rowspan="5"></th>
 								<th class="white" rowspan="5"></th>
 								<td class="tg-0pky" colspan="2">상세정보</td>
-								<td class="tg-0pky" colspan="2"></td>
+								<td class="tg-0pky" colspan="2">생일 : ${p_list.mBirth } 기혼 여부 ${p_list.mMarriage } 성별 ${p_list.mGender}  </td>
 							</tr>
 							<tr>
 								<td class="tg-0pky" colspan="2">ID</td>
-								<td class="tg-0pky" colspan="2">kyeong</td>
+								<td class="tg-0pky" colspan="2">${p_list.mId }</td>
 								<td class="tg-0pky" colspan="2">주거지</td>
-								<td class="tg-0pky" colspan="2">경기도 구리시 안창동</td>
+								<td class="tg-0pky" colspan="2">주소${p_list.mAddress } 우편번호${p_list.mZipcode}  </td>
 							</tr>
 							<tr>
 								<td class="tg-0pky" colspan="2">성명</td>
-								<td class="tg-0pky" colspan="2">경제현</td>
+								<td class="tg-0pky" colspan="2">${p_list.mName }</td>
 								<td class="tg-0pky" colspan="2">전화</td>
-								<td class="tg-0pky" colspan="2">010-3333-2222</td>
+								<td class="tg-0pky" colspan="2">${p_list.mPhone }</td>
 							</tr>
 							<tr>
 								<td class="tg-0pky" colspan="2">가입일</td>
-								<td class="tg-0pky" colspan="2">20180627</td>
+								<td class="tg-0pky" colspan="2">${p_list.mDate }</td>
 								<td class="tg-0pky" colspan="2">E-mail</td>
-								<td class="tg-0pky" colspan="2">economy@cc.com</td>
+								<td class="tg-0pky" colspan="2">${p_list.mEmail }</td>
 							</tr>
 							<tr>
 								<td class="tg-0pky" colspan="2">상태</td>
-								<td class="tg-0pky" colspan="2"></td>
+								<td class="tg-0pky" colspan="2">${p_list.mStatus }</td>
 								<td class="tg-0pky" colspan="2"></td>
 								<td class="tg-0pky" colspan="2"></td>
 							</tr>
