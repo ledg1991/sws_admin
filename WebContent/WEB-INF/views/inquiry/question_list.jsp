@@ -100,7 +100,7 @@ margin-right:10px;
                             
                                 <td>${inquiry.mId}</td>
                                 <td>${inquiry.iType}</td>
-                                <td>${inquiry.iTitle}</td>
+                                <td><a href="${path}/group2_sws_prj/answer.do?mNumber=${inquiry.iNumber}">${inquiry.iTitle}</a></td>
                                 <td>${inquiry.iDate}</td>
                                 <td>                                
                                 <c:set var="status" value="${inquiry.iCheck}" />
