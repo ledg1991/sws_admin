@@ -86,7 +86,6 @@ height:400px;
 <form id="form1" name="form1" enctype="multipart/form-data" method="post">
     <table border="">
         <tr>
-            <td>상품 이미지</td>
             <td>
                 <img src="${path}/images/${p_info.pImg}" height="150px" width="150px">
                 <img src="${path}/images/${p_info.pImg2}" height="150px" width="150px">
@@ -98,10 +97,7 @@ height:400px;
         </tr>
         <tr>
             <td>상품명 : ${p_info.pName}</td>
-            <td>가격 : ${p_info.pPrice} </td>
-            <td>렌탈 가 : ${p_info.pRfee} </td>
-            <td>수량 : ${p_info.pCount} </td>
-            <td>등록일: ${p_info.pDate} </td>
+            <td>가격 : ${p_info.pPrice} | 렌탈 가 : ${p_info.pRfee} | 수량 : ${p_info.pCount} | 등록일: ${p_info.pDate} </td>
         </tr>
         
         
