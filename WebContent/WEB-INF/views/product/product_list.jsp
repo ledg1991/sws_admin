@@ -99,7 +99,7 @@ margin-right:10px;
                             	<td><c:out value="${count}"/></td>
                             
                                 <td>${product.pImg}</td>
-                                <td>${product.pName}</td>
+                                <td><a href="${path}/group2_sws_prj/productInfo.do?pNum=${product.pNum}">${product.pName}</a></td>
                                 <td>${product.pPrice}</td>
                                 <td>${product.pCount}</td>
                         </c:forEach>

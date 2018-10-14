@@ -47,7 +47,7 @@ public class ProductListcontroller {
 	
 	@RequestMapping(value="productInfo.do" , method=GET)
 	public String productInfo(HttpSession session, String pNum,Model m) {
-		String url="product/product_reg";
+		String url="product/product_info";
 			Product p_info=product.info(pNum);
 			
 			m.addAttribute("p_info",p_info);
