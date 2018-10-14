@@ -96,8 +96,7 @@ height:400px;
             </td>
         </tr>
         <tr>
-            <td>상품명 : ${p_info.pName}</td>
-            <td>가격 : ${p_info.pPrice} | 렌탈 가 : ${p_info.pRfee} | 수량 : ${p_info.pCount} | 등록일: ${p_info.pDate} </td>
+            <td>상품명 : ${p_info.pName} | 가격 : ${p_info.pPrice} | 렌탈 가 : ${p_info.pRfee} | 수량 : ${p_info.pCount} | 등록일: ${p_info.pDate} </td>
         </tr>
         
         
