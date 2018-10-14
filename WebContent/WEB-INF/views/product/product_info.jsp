@@ -109,7 +109,7 @@ height:400px;
             <td colspan="2" align="center">
                 <input type="hidden" name="productId" value="${vo.productId}">
                 <input type="button" id="editBtn" value="수정">
-                <input type="button" id="deleteBtn"value="취소" onclick="location.href='http://localhost:8080/group2_sws_prj/product/product_list.html'">
+                <input type="button" id="deleteBtn"value="취소" onclick="location.href='http://localhost:8080/group2_sws_prj/product/product_list.do'">
             </td>
         </tr>
     </table>

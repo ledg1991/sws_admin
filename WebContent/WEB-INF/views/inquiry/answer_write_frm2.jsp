@@ -99,7 +99,16 @@ height:400px;
 							<td align="center">작성 날짜</td>
 							<td  >${answer.iDate }
 						</tr>
-						
+						<tr>
+							<td class="tab_title">문의자</td>
+							<td  ><input type="text"
+								id="title_inputBox" value="송재원" class="inputBox"
+								readonly="readonly" style="width: 500px;" /></td>
+						</tr>
+						<tr>
+							<td align="center">문의 날짜</td>
+							<td  ><input type="date" id="now_date">
+						</tr>
 						<tr class="tab_title">
 							<td  >문의 종류</td>
 							<td  ><select id="notice_category">
