@@ -16,7 +16,7 @@
 
 <script type="text/javascript">
 $(document).ready(function(){
-    $("#regbtn").click(function(){
+    $("#regBtn").click(function(){
         location.href="${path}/group2_sws_prj/p_regist.do";
     });
 });
