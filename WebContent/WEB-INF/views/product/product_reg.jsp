@@ -150,23 +150,29 @@ height:400px;
                 <img src="${path}/images/${p_info.pImg3}" height="150px" width="150px">
                 <img src="${path}/images/${p_info.pImg4}" height="150px" width="150px">
                 <br>
-             </td>
-                <td>
+                
                 <input type="file" id="productPhoto" name="productPhoto">
-            </td>
+            
+             </td>
+                
         </tr>
         <tr>
             <td>
             상품명 : <input type="text" name="pName" id="pName"/> | 
             가격 : <input type="text" name="pPrice" id="pPrice"/> | 
+            </td>
+            </tr>
+            <tr>
+            <td>
             렌탈 가 : <input type="text" name="pRfee" id="pRfee"/> | 
             수량 : <input type="text" name="pCount" id="pCount"/> | 
                   
              </td>
+             
         </tr>
         <tr>
         <td>
-       	 카테고리    <input type="text" name="pCat" id="pCat"/>
+       	 카테고리 
        	 <select name="BDIV" id="ctg" class="sel_cate" onchange="fnCngList(this.value);">
             <option value="">선택</option>
             <option value="1">bag</option>
