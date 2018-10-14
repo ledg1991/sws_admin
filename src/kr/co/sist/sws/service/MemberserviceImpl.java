@@ -35,7 +35,7 @@ public class MemberserviceImpl implements Memberservice {
 	}
 
 	@Override
-	public Member actitvity(String mNumber) {
+	public Member activity(String mNumber) {
 		// TODO Auto-generated method stub
 		return mem_dao.activity(mNumber);
 	}

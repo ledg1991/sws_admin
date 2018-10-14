@@ -18,14 +18,16 @@
 $(document).ready(function(){
     // 상품 수정 버튼 클릭이벤트
     $("#stopBtn").click(function(){
-        var mNumber = ${p_list.mNumber };
-        result = confirm('정지 하시겠습니까');
-        if(result == true){
+        
+        if (confirm("정말 삭제하시겠습니까??") == true){ 
+        	
         	document.form1.action = "${path}/group2_sws_prj/m_stop.do";
             document.form1.submit();
-        }else{
-        return false;
+        }else{   //취소
+            return;
         }
+
+
 
         
         
@@ -112,7 +114,7 @@ height:400px;
 								<th id="photo" colspan="5" rowspan="5"></th>
 								<th class="white" rowspan="5"></th>
 								<td class="tg-0pky" colspan="2">회원 번호</td>
-								<td class="tg-0pky" colspan="2"> ${p_list.mNumber } </td>
+								<td class="tg-0pky" colspan="2"> <form id="form1" name="form1" enctype="multipart/form-data" method="post">${p_list.mNumber }</form> </td>
 								<th class="white" rowspan="5"></th>
 								<th class="white" rowspan="5"></th>
 								<td class="tg-0pky" colspan="2">상세정보</td>
@@ -304,7 +306,7 @@ height:400px;
 			<div id="managebutton">
 			<!-- <input type="button" value="이메일 보내기"> -->
 			<!-- <input type="button" value="전체 이용권 내역"> -->
-			<input type="button" id="stopBtn" value="회원 정지">
+			<input type="button" id="stopBtn" name="stopBtn" value="회원 정지">
 			<a href="${path}/group2_sws_prj/member.do"><input type="button" value="목록으로"></a>
 			</div>
 		</div>

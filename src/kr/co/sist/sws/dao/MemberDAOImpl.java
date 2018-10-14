@@ -33,7 +33,7 @@ public class MemberDAOImpl implements MemberDAO {
 	@Override
 	public Member m_stop(String mNumber) {
 		// TODO Auto-generated method stub
-		return sqlSession.selectOne("member.stop",mNumber);
+		return sqlSession.selectOne("member.m_stop",mNumber);
 	}
 
 	@Override

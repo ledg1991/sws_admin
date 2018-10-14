@@ -12,7 +12,7 @@ import kr.co.sist.sws.vo.Member;
 	    public List<Member> memberlist();
 	    public Member profile(String mNumber);
 	    public Member m_stop(String mNumber);
-	    public Member actitvity(String mNumber);
+	    public Member activity(String mNumber);
 	}
 
 

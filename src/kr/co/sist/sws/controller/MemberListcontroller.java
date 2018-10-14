@@ -60,7 +60,7 @@ public class MemberListcontroller {
 	@RequestMapping(value="m_stop.do" , method=POST)
 	public String m_stop(HttpSession session, String mNumber) {
 		String url="member/member_list";
-			Member m_stop=member.stop(mNumber);
+			Member m_stop=member.m_stop(mNumber);
 		
 		
 	
@@ -70,7 +70,7 @@ public class MemberListcontroller {
 	@RequestMapping(value="activity.do", method=POST)
 	public String activity(HttpSession session, String mNumber) {
 		String url="member/member_list";
-			Member m_stop=member.activity(mNumber);
+			Member activity=member.activity(mNumber);
 		
 		
 	
