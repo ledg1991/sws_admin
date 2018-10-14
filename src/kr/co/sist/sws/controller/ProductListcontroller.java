@@ -45,6 +45,12 @@ public class ProductListcontroller {
 		return url;
 	}
 	
+	@RequestMapping(value="/p_regist.do",method=GET)
+	public String login() { 
+		return "product/product_reg";
+	}//hello
+	
+	
 	@RequestMapping(value="productInfo.do" , method=GET)
 	public String productInfo(HttpSession session, String pNum,Model m) {
 		String url="product/product_info";

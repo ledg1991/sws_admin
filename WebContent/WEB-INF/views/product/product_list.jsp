@@ -15,6 +15,11 @@
 	src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 
 <script type="text/javascript">
+$(document).ready(function(){
+    $("#regbtn").click(function(){
+        location.href="${path}/group2_sws_prj/p_regist.do";
+    });
+});
 
 
 </script>
@@ -83,13 +88,13 @@ margin-right:10px;
 			<div id="content">
 			<div id="content_title"><strong>상품 목록</strong></div>
     <table id="tecket_surface_table">
-						<thred><tr>
+						<tr>
 							<th>번호</th>
 							<th>상품이미지</th>
 							<th>상품명</th>
 							<th>가격</th>
 							<th>수량</th>
-						</tr></thred>
+						</tr>
 						 <tbody>
 						 
                         <c:forEach items="${p_list}" var="product">
@@ -108,14 +113,16 @@ margin-right:10px;
 					<div id="list_page_wrap">
 					<a href="#">&lt;</a><strong><a href="#">1</a></strong> <a href="#">2</a> <a href="#">3</a> <a href="#">></a>
 					</div>
-					<div id="searchID" style="text-align: right;margin-top: 20px">
 					<input type="button" id="regBtn" value="상품 등록">
+					<div id="searchID" style="text-align: right;margin-top: 20px">
+					
 			<form action="" method="post" name="searchFrm"	id="searchFrm">
 				
 				<input type="text" name="keyword" class="inputBox"
 					style="width:200px" id="keyword" value="상품명으로 검색"/>
 				<input type="button" value="검색" id="btnSearch" class="btn"/>
 			</form>
+	</div>
 	</div>
 	</div>
 	</div>
