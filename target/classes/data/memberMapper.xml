@@ -14,7 +14,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
     
     <select id="profile"  resultType="kr.co.sist.sws.vo.Member">
         select MEMBER_NUMBER as mNumber, ID as mId, NAME as mName, EMAIL as mEmail, to_char(INPUT_DATE,'yy-mm-dd') as mDate, STATUS as mStatus,
-        BIRTH as mBirth,MARRIAGE as mMarriage,GENDER as mGender,PHONE as mPhone,ZIPCODE as mZipcode,ADDRESS as mAddress
+        to_char(BIRTH,'yy-mm-dd') as mBirth,MARRIAGE as mMarriage,GENDER as mGender,PHONE as mPhone,ZIPCODE as mZipcode,ADDRESS as mAddress
         from member
         where MEMBER_NUMBER=#{mNumber} 
         

@@ -98,13 +98,25 @@ height:400px;
 								<th class="white" rowspan="5"></th>
 								<th class="white" rowspan="5"></th>
 								<td class="tg-0pky" colspan="2">상세정보</td>
-								<td class="tg-0pky" colspan="2">생일 : ${p_list.mBirth } 기혼 여부 ${p_list.mMarriage } 성별 ${p_list.mGender}  </td>
+								<td class="tg-0pky" colspan="2">생일 : ${p_list.mBirth } 
+								
+								<c:set var="statusm" value=" ${p_list.mMarriage }" />
+
+							<c:choose> <c:when test="${statusm eq '0'}">  미혼   </c:when>
+							<c:when test="${statusm eq '1'}">  기혼   </c:when>
+						    <c:otherwise>    미 기입    </c:otherwise> </c:choose>
+						    <c:set var="statusg" value=" ${p_list.mGender}" />
+							<c:choose> <c:when test="${statusg eq '1'}">  남자   </c:when>
+							<c:when test="${statusg eq '2'}">  여자   </c:when>
+						    <c:otherwise>    미 기입    </c:otherwise> </c:choose>	
+								
+							  </td>
 							</tr>
 							<tr>
 								<td class="tg-0pky" colspan="2">ID</td>
 								<td class="tg-0pky" colspan="2">${p_list.mId }</td>
 								<td class="tg-0pky" colspan="2">주거지</td>
-								<td class="tg-0pky" colspan="2">주소${p_list.mAddress } 우편번호${p_list.mZipcode}  </td>
+								<td class="tg-0pky" colspan="2">주소 : ${p_list.mAddress } | 우편번호 : ${p_list.mZipcode}  </td>
 							</tr>
 							<tr>
 								<td class="tg-0pky" colspan="2">성명</td>
@@ -120,7 +132,13 @@ height:400px;
 							</tr>
 							<tr>
 								<td class="tg-0pky" colspan="2">상태</td>
-								<td class="tg-0pky" colspan="2">${p_list.mStatus }</td>
+								<td class="tg-0pky" colspan="2">
+								<c:set var="status" value="${p_list.mStatus }" />
+
+							<c:choose> <c:when test="${status eq '0'}">  정상    </c:when>
+						    <c:otherwise>    정지    </c:otherwise> </c:choose>
+								
+								</td>
 								<td class="tg-0pky" colspan="2"></td>
 								<td class="tg-0pky" colspan="2"></td>
 							</tr>
