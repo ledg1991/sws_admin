@@ -45,5 +45,16 @@ public class InquiryListcontroller {
 		return url;
 	}
 	
+	@RequestMapping(value="answer.do" , method=GET)
+	public String answer(HttpSession session, String iNumber,Model m) {
+		String url="inquiry/answer_write_frm";
+		Inquiry answer=inquiry.answer(iNumber);
+			m.addAttribute("answer",answer);
+		
+		
+	
+		return url;
+	}
+	
 		
 }//class

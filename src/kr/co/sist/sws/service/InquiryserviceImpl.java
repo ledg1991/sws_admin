@@ -23,6 +23,12 @@ public class InquiryserviceImpl implements Inquiryservice {
 		return i_dao.inquirylist();
 		
 	}
+
+	@Override
+	public Inquiry answer(String iNumber) {
+		// TODO Auto-generated method stub
+		return i_dao.answer(iNumber);
+	}
 	
 
 }

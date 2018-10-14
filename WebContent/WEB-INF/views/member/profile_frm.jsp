@@ -99,12 +99,13 @@ height:400px;
 								<th class="white" rowspan="5"></th>
 								<td class="tg-0pky" colspan="2">상세정보</td>
 								<td class="tg-0pky" colspan="2">생일 : ${p_list.mBirth } 
-								
+								| 결혼 여부 :
 								<c:set var="statusm" value=" ${p_list.mMarriage }" />
 
 							<c:choose> <c:when test="${statusm eq '0'}">  미혼   </c:when>
 							<c:when test="${statusm eq '1'}">  기혼   </c:when>
 						    <c:otherwise>    미 기입    </c:otherwise> </c:choose>
+						    | 성별 :
 						    <c:set var="statusg" value=" ${p_list.mGender}" />
 							<c:choose> <c:when test="${statusg eq '1'}">  남자   </c:when>
 							<c:when test="${statusg eq '2'}">  여자   </c:when>

@@ -13,8 +13,17 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         where i.MEMBER_NUMBER=m.MEMBER_NUMBER
         order by iDate desc
         
-    </select>    
+    </select>  
     
+      
+     <select id="answer"  resultType="kr.co.sist.sws.vo.Inquiry">
+        select I_NUMBER as iNumber , CONTENT as iContent, i.I_TYPE as iType, i.TITLE as iTitle, to_char(i.INPUT_DATE,'yy-mm-dd') as iDate,
+        i.ANSWER_CHECK as iCheck, m.MEMBER_NUMBER as mNumber, m.id as mId
+        from inquiry i, member m
+        where i.MEMBER_NUMBER=m.MEMBER_NUMBER and I_NUMBER=#{iNumber} 
+        
+        
+    </select>  
  
 </mapper>
 
