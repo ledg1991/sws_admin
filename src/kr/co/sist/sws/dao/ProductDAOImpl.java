@@ -22,6 +22,11 @@ public class ProductDAOImpl implements ProductDAO {
     	List<Product> list=sqlSession.selectList("product.productlist");
     	return list;
     }
+
+	@Override
+	public Product info(String pNum) {
+		return sqlSession.selectOne("product.product",pNum);
+	}
    
     
    

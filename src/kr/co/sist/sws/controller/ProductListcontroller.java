@@ -45,6 +45,19 @@ public class ProductListcontroller {
 		return url;
 	}
 	
+	@RequestMapping(value="productInfo.do" , method=GET)
+	public String productInfo(HttpSession session, String pNum,Model m) {
+		String url="product/product_reg";
+			Product p_info=product.info(pNum);
+			
+			m.addAttribute("p_info",p_info);
+		
+		
+	
+		return url;
+	}
+	
+	
 	
 	
 		

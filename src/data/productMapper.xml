@@ -7,7 +7,19 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 <mapper namespace="product">
     
     <select id="productlist"  resultType="kr.co.sist.sws.vo.Product">
+        select PRODUCT_NUM as pNum, IMG1 as pImg, PRD_NAME as pName, PRODUCT_COUNT as pCount, price as pPrice
+         from product
+        
+    </select>    
+    
+    <select id="product"  resultType="kr.co.sist.sws.vo.Product">
         select IMG1 as pImg, PRD_NAME as pName, PRODUCT_COUNT as pCount, price as pPrice
+        
+        PRODUCT_NUM as pNum, CATEGORY as pCat, BRAND as pBrand, PRD_NAME as pName,
+         PRICE as pPrice,, RENTAL_FEE as pRfee, INPUT_DATE as pDate, 
+         IMG1 as pImg, IMG2 as pImg2, IMG3 as pImg3, IMG4 as pImg4,
+          PRODUCT_COUNT as pCount, FC_NUM as pFn, SC_NUM as pSn
+
          from product
         
     </select>    

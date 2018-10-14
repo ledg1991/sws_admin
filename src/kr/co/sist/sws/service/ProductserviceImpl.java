@@ -25,6 +25,12 @@ public class ProductserviceImpl implements Productservice {
 		// TODO Auto-generated method stub
 		return p_dao.productlist();
 	}
+
+	@Override
+	public Product info(String pNum) {
+		// TODO Auto-generated method stub
+		return p_dao.info(pNum);
+	}
     
 	
 	
